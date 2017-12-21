@@ -1,0 +1,365 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		921B72B51FEAB7A400370DD6 /* FontAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921B72B41FEAB7A400370DD6 /* FontAnimation.swift */; };
+		921B72B71FEAB7FD00370DD6 /* TweePlaceholderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921B72B61FEAB7FD00370DD6 /* TweePlaceholderTextField.swift */; };
+		921B72B91FEAB84800370DD6 /* TweeBorderedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921B72B81FEAB84800370DD6 /* TweeBorderedTextField.swift */; };
+		921B72BB1FEAB89500370DD6 /* TweeActiveTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921B72BA1FEAB89500370DD6 /* TweeActiveTextField.swift */; };
+		92E7FC3A1FE0374600E58DF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E7FC391FE0374600E58DF5 /* AppDelegate.swift */; };
+		92E7FC3C1FE0374600E58DF5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E7FC3B1FE0374600E58DF5 /* ViewController.swift */; };
+		92E7FC3F1FE0374600E58DF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92E7FC3D1FE0374600E58DF5 /* Main.storyboard */; };
+		92E7FC411FE0374600E58DF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92E7FC401FE0374600E58DF5 /* Assets.xcassets */; };
+		92E7FC441FE0374600E58DF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92E7FC421FE0374600E58DF5 /* LaunchScreen.storyboard */; };
+		92E7FC4C1FE0388200E58DF5 /* TweeAttributedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E7FC4B1FE0388200E58DF5 /* TweeAttributedTextField.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		921B72B41FEAB7A400370DD6 /* FontAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontAnimation.swift; sourceTree = "<group>"; };
+		921B72B61FEAB7FD00370DD6 /* TweePlaceholderTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweePlaceholderTextField.swift; sourceTree = "<group>"; };
+		921B72B81FEAB84800370DD6 /* TweeBorderedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweeBorderedTextField.swift; sourceTree = "<group>"; };
+		921B72BA1FEAB89500370DD6 /* TweeActiveTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweeActiveTextField.swift; sourceTree = "<group>"; };
+		92E7FC361FE0374500E58DF5 /* TweeTextField.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TweeTextField.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		92E7FC391FE0374600E58DF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		92E7FC3B1FE0374600E58DF5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		92E7FC3E1FE0374600E58DF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		92E7FC401FE0374600E58DF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		92E7FC431FE0374600E58DF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		92E7FC451FE0374600E58DF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92E7FC4B1FE0388200E58DF5 /* TweeAttributedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweeAttributedTextField.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		92E7FC331FE0374500E58DF5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		921B72B21FEAB72200370DD6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				92E7FC401FE0374600E58DF5 /* Assets.xcassets */,
+				92E7FC451FE0374600E58DF5 /* Info.plist */,
+				92E7FC421FE0374600E58DF5 /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		921B72B31FEAB73100370DD6 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				921B72B41FEAB7A400370DD6 /* FontAnimation.swift */,
+				921B72BA1FEAB89500370DD6 /* TweeActiveTextField.swift */,
+				92E7FC4B1FE0388200E58DF5 /* TweeAttributedTextField.swift */,
+				921B72B81FEAB84800370DD6 /* TweeBorderedTextField.swift */,
+				921B72B61FEAB7FD00370DD6 /* TweePlaceholderTextField.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		92E7FC2D1FE0374500E58DF5 = {
+			isa = PBXGroup;
+			children = (
+				92E7FC381FE0374600E58DF5 /* TweeTextField */,
+				92E7FC371FE0374500E58DF5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		92E7FC371FE0374500E58DF5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				92E7FC361FE0374500E58DF5 /* TweeTextField.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		92E7FC381FE0374600E58DF5 /* TweeTextField */ = {
+			isa = PBXGroup;
+			children = (
+				921B72B31FEAB73100370DD6 /* Sources */,
+				921B72B21FEAB72200370DD6 /* Supporting Files */,
+				92E7FC391FE0374600E58DF5 /* AppDelegate.swift */,
+				92E7FC3D1FE0374600E58DF5 /* Main.storyboard */,
+				92E7FC3B1FE0374600E58DF5 /* ViewController.swift */,
+			);
+			path = TweeTextField;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		92E7FC351FE0374500E58DF5 /* TweeTextField */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92E7FC481FE0374600E58DF5 /* Build configuration list for PBXNativeTarget "TweeTextField" */;
+			buildPhases = (
+				92E7FC321FE0374500E58DF5 /* Sources */,
+				92E7FC331FE0374500E58DF5 /* Frameworks */,
+				92E7FC341FE0374500E58DF5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TweeTextField;
+			productName = BouncedTextField;
+			productReference = 92E7FC361FE0374500E58DF5 /* TweeTextField.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		92E7FC2E1FE0374500E58DF5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Oleg Gnidets";
+				TargetAttributes = {
+					92E7FC351FE0374500E58DF5 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 92E7FC311FE0374500E58DF5 /* Build configuration list for PBXProject "TweeTextField" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 92E7FC2D1FE0374500E58DF5;
+			productRefGroup = 92E7FC371FE0374500E58DF5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				92E7FC351FE0374500E58DF5 /* TweeTextField */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		92E7FC341FE0374500E58DF5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92E7FC441FE0374600E58DF5 /* LaunchScreen.storyboard in Resources */,
+				92E7FC411FE0374600E58DF5 /* Assets.xcassets in Resources */,
+				92E7FC3F1FE0374600E58DF5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		92E7FC321FE0374500E58DF5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92E7FC3C1FE0374600E58DF5 /* ViewController.swift in Sources */,
+				921B72B51FEAB7A400370DD6 /* FontAnimation.swift in Sources */,
+				92E7FC3A1FE0374600E58DF5 /* AppDelegate.swift in Sources */,
+				921B72B71FEAB7FD00370DD6 /* TweePlaceholderTextField.swift in Sources */,
+				92E7FC4C1FE0388200E58DF5 /* TweeAttributedTextField.swift in Sources */,
+				921B72B91FEAB84800370DD6 /* TweeBorderedTextField.swift in Sources */,
+				921B72BB1FEAB89500370DD6 /* TweeActiveTextField.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		92E7FC3D1FE0374600E58DF5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				92E7FC3E1FE0374600E58DF5 /* Base */,
+			);
+			name = Main.storyboard;
+			path = .;
+			sourceTree = "<group>";
+		};
+		92E7FC421FE0374600E58DF5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				92E7FC431FE0374600E58DF5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			path = .;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		92E7FC461FE0374600E58DF5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		92E7FC471FE0374600E58DF5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		92E7FC491FE0374600E58DF5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4LZBFVML4B;
+				INFOPLIST_FILE = "$(SRCROOT)/TweeTextField/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.com.tweefield;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		92E7FC4A1FE0374600E58DF5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4LZBFVML4B;
+				INFOPLIST_FILE = "$(SRCROOT)/TweeTextField/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.com.tweefield;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		92E7FC311FE0374500E58DF5 /* Build configuration list for PBXProject "TweeTextField" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92E7FC461FE0374600E58DF5 /* Debug */,
+				92E7FC471FE0374600E58DF5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		92E7FC481FE0374600E58DF5 /* Build configuration list for PBXNativeTarget "TweeTextField" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92E7FC491FE0374600E58DF5 /* Debug */,
+				92E7FC4A1FE0374600E58DF5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 92E7FC2E1FE0374500E58DF5 /* Project object */;
+}
