@@ -59,16 +59,13 @@ usernameTextField.lineColor = .green
 usernameTextField.lineWidth = 2
 ```
 
-## Contribute
-
-We would love you for the contribution to **YourLibraryName**, check the ``LICENSE`` file for more info.
-
 ## Communication
 
 - If you want to contribute, submit a pull request.
 - If you found a bug, have suggestions or need help, please, open an issue.
 - If you need help, write me oleg.oleksan@gmail.com.
 - If you want to donate I would be thankful ;]
+
 [![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=CVFAEEZJ9DJ3L)
 
 ## License
