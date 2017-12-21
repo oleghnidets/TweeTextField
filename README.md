@@ -37,14 +37,18 @@ To get the full benefits import `TweeTextField` wherever you import UIKit
 1. Download and drop `Sources` folder in your project.  
 2. Congratulations!  
 
-## Usage example
+## Usage
 
-Select one of the text fields provided based on your requirements.
+Select one of the text fields provided based on your requirements. In general, you can use `TweeAttributedTextField`. It is a main class with aggregated functionalities of other text fields.
+
+Look at class diagram:
+
+![Class-diagram](/docs/class-diagram.png)
 
 - `TweePlaceholderTextField` has a customized placeholder label which has animations on the beginning and ending editing.
 - `TweeBorderedTextField` shows a bottom line permanently.
 - `TweeActiveTextField` shows animated bottom line when a user begins editing.
-- `TweeAttributedTextField` shows the custom info label under text field.
+- `TweeAttributedTextField` shows the custom info label under text field. 
 
 You can set up text field based on your preferences via Attributes Inspector. Also the library has some properties accessible for you.
 Check out sample project for more information.
@@ -71,7 +75,6 @@ usernameTextField.lineWidth = 2
 ## License
 Distributed under the MIT license. See ``LICENSE`` for more information.
 
-[https://github.com/yourname/github-link](https://github.com/dbader/)
 
 [swift-image]:https://img.shields.io/badge/swift-4.0-orange.svg
 [swift-url]: https://swift.org/
