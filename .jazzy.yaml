@@ -1,0 +1,13 @@
+author: Oleg Hnidets
+author_url: https://github.com/oleghnidets
+github_url: https://github.com/oleghnidets/TweeTextField
+root_url: https://oleghnidets.github.io/TweeTextField/
+
+module: TweeTextField
+xcodebuild_arguments: [-project, 'TweeTextField.xcodeproj', -scheme, 'TweeTextField']
+
+readme: README.md
+output: docs
+theme: fullwidth
+
+

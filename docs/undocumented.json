@@ -1,0 +1,61 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/OGnidets/TweeTextField/Sources/TweeActiveTextField.swift",
+      "line": 40,
+      "symbol": "TweeActiveTextField.awakeFromNib()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/OGnidets/TweeTextField/Sources/TweeAttributedTextField.swift",
+      "line": 37,
+      "symbol": "TweeAttributedTextField.awakeFromNib()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/OGnidets/TweeTextField/Sources/TweeAttributedTextField.swift",
+      "line": 42,
+      "symbol": "TweeAttributedTextField.showInfo(_:animated:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/OGnidets/TweeTextField/Sources/TweeBorderedTextField.swift",
+      "line": 42,
+      "symbol": "TweeBorderedTextField.awakeFromNib()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/OGnidets/TweeTextField/Sources/TweeBorderedTextField.swift",
+      "line": 52,
+      "symbol": "TweeBorderedTextField.layoutSubviews()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/OGnidets/TweeTextField/Sources/TweePlaceholderTextField.swift",
+      "line": 14,
+      "symbol": "TweePlaceholderTextField.MinimizationAnimationType.immediately",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/OGnidets/TweeTextField/Sources/TweePlaceholderTextField.swift",
+      "line": 16,
+      "symbol": "TweePlaceholderTextField.MinimizationAnimationType.smoothly",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/OGnidets/TweeTextField/Sources/TweePlaceholderTextField.swift",
+      "line": 68,
+      "symbol": "TweePlaceholderTextField.awakeFromNib()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/OGnidets/TweeTextField"
+}

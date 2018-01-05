@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>TweeTextField  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+
+    <a title="TweeTextField  Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="index.html">
+          TweeTextField Docs
+        </a>
+         (75% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/oleghnidets/TweeTextField">
+            <img class="header-icon" src="img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Foleghnidets%2Egithub%2Eio%2FTweeTextField%2Fdocsets%2FTweeTextField%2Exml">
+            <img class="header-icon" src="img/dash.png"/>
+            Install in Dash
+          </a>
+        </p>
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="index.html">TweeTextField Reference</a>
+      <img class="carat" src="img/carat.png" />
+      TweeTextField  Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/TweeActiveTextField.html">TweeActiveTextField</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/TweeAttributedTextField.html">TweeAttributedTextField</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/TweeBorderedTextField.html">TweeBorderedTextField</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/TweePlaceholderTextField.html">TweePlaceholderTextField</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/TweePlaceholderTextField/MinimizationAnimationType.html">– MinimizationAnimationType</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            
+            <h1 id='tweetextfield' class='heading'>TweeTextField</h1>
+
+<p><a href="https://swift.org/"><img src="https://img.shields.io/badge/swift-4.0-orange.svg" alt="Swift Version"></a>
+<a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License"></a></p>
+
+<p>This is lightweight library that provides different types of Text Fields based on your needs. I was inspired by <a href="https://uimovement.com/ui/2524/input-field-help/">Jan Henneberg</a>. </p>
+
+<p><img src="/docs/tweetextfield-sample.gif" alt="Preview"></p>
+<h2 id='features' class='heading'>Features</h2>
+
+<ul>
+<li>[x] Customized placeholder</li>
+<li>[x] Info label under text field</li>
+<li>[x] Nice animation for placeholder</li>
+<li>[x] Nice animation for bottom line</li>
+<li>[x] Customizable via Attributes Inspector</li>
+<li>[x] Clean code with divided functionalities</li>
+<li>[x] No UITextField behaviours override</li>
+</ul>
+<h2 id='requirements' class='heading'>Requirements</h2>
+
+<ul>
+<li>iOS 9.0+</li>
+<li>Xcode 9.0+</li>
+</ul>
+<h2 id='installation' class='heading'>Installation</h2>
+<h4 id='cocoapods' class='heading'>CocoaPods</h4>
+
+<p>You can use <a href="http://cocoapods.org/">CocoaPods</a> to install <code>TweeTextField</code> by adding it to your <code>Podfile</code>:</p>
+<pre class="highlight ruby"><code><span class="n">pod</span> <span class="s1">'TweeTextField'</span>
+</code></pre>
+
+<p>To get the full benefits import <code>TweeTextField</code> wherever you import UIKit</p>
+<h4 id='manually' class='heading'>Manually</h4>
+
+<ol>
+<li>Download and drop <code>Sources</code> folder in your project.<br></li>
+<li>Congratulations!<br></li>
+</ol>
+<h2 id='usage' class='heading'>Usage</h2>
+
+<p>Select one of the text fields provided based on your requirements. In general, you can use <code><a href="Classes/TweeAttributedTextField.html">TweeAttributedTextField</a></code>. It is a main class with aggregated functionalities of other text fields.</p>
+
+<p>Look at class diagram:</p>
+
+<p><img src="/docs/class-diagram.png" alt="Class-diagram"></p>
+
+<ul>
+<li><code><a href="Classes/TweePlaceholderTextField.html">TweePlaceholderTextField</a></code> has a customized placeholder label which has animations on the beginning and ending editing.</li>
+<li><code><a href="Classes/TweeBorderedTextField.html">TweeBorderedTextField</a></code> shows a bottom line permanently.</li>
+<li><code><a href="Classes/TweeActiveTextField.html">TweeActiveTextField</a></code> shows animated bottom line when a user begins editing.</li>
+<li><code><a href="Classes/TweeAttributedTextField.html">TweeAttributedTextField</a></code> shows the custom info label under text field.</li>
+</ul>
+
+<p>You can set up text field based on your preferences via Attributes Inspector. Also the library has some properties accessible for you.
+Check out sample project for more information.</p>
+
+<p><img src="/docs/attributes.png" alt="Attributes Inspector"></p>
+<pre class="highlight swift"><code><span class="n">emailTextField</span><span class="o">.</span><span class="n">infoTextColor</span> <span class="o">=</span> <span class="o">.</span><span class="n">yellow</span>
+<span class="n">emailTextField</span><span class="o">.</span><span class="nf">showInfo</span><span class="p">(</span><span class="s">"Hello World!"</span><span class="p">,</span> <span class="nv">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
+
+<span class="n">usernameTextField</span><span class="o">.</span><span class="n">lineColor</span> <span class="o">=</span> <span class="o">.</span><span class="n">green</span>
+<span class="n">usernameTextField</span><span class="o">.</span><span class="n">lineWidth</span> <span class="o">=</span> <span class="mi">2</span>
+</code></pre>
+<h2 id='communication' class='heading'>Communication</h2>
+
+<ul>
+<li>If you want to contribute, submit a pull request.</li>
+<li>If you found a bug, have suggestions or need help, please, open an issue.</li>
+<li>If you need help, write me <a href="mailto:oleg.oleksan@gmail.com">oleg.oleksan@gmail.com</a>.</li>
+<li>If you want to donate I would be thankful ;]</li>
+</ul>
+
+<p><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=CVFAEEZJ9DJ3L"><img src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" alt="paypal"></a></p>
+<h2 id='license' class='heading'>License</h2>
+
+<p>Distributed under the MIT license. See <code>LICENSE</code> for more information.</p>
+
+          </div>
+        </section>
+
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2018 <a class="link" href="https://github.com/oleghnidets" target="_blank" rel="external">Oleg Hnidets</a>. All rights reserved. (Last updated: 2018-01-05)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>
