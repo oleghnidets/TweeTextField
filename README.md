@@ -9,18 +9,20 @@ This is lightweight library that provides different types of Text Fields based o
 
 ## Features
 
-- [x] Customized placeholder
-- [x] Info label under text field
+- [x] Customizable placeholder
+- [x] Customizable label under text field
+- [x] Customizable via Attributes Inspector
 - [x] Nice animation for placeholder
 - [x] Nice animation for bottom line
-- [x] Customizable via Attributes Inspector
-- [x] Clean code with divided functionalities
 - [x] No UITextField behaviours override
+- [x] Clean code with divided functionalities
+- [x] Easy to use and extend
 
 ## Requirements
 
 - iOS 9.0+
 - Xcode 9.0+
+- Swift 4.0+
 
 ## Installation
 
@@ -39,6 +41,7 @@ To get the full benefits import `TweeTextField` wherever you import UIKit
 
 ## Usage
 
+Check out the [documentation](https://oleghnidets.github.io/TweeTextField/) for more details. 
 Select one of the text fields provided based on your requirements. In general, you can use `TweeAttributedTextField`. It is a main class with aggregated functionalities of other text fields.
 
 Look at class diagram:
@@ -68,9 +71,7 @@ usernameTextField.lineWidth = 2
 - If you want to contribute, submit a pull request.
 - If you found a bug, have suggestions or need help, please, open an issue.
 - If you need help, write me oleg.oleksan@gmail.com.
-- If you want to donate I would be thankful ;]
-
-[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=CVFAEEZJ9DJ3L)
+- If you want to [give me](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=CVFAEEZJ9DJ3L) some motivation ;] 
 
 ## License
 Distributed under the MIT license. See ``LICENSE`` for more information.
