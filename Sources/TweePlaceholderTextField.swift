@@ -57,17 +57,13 @@ public class TweePlaceholderTextField: UITextField {
 
 	public override var text: String? {
 		didSet {
-			if let text = text, text.isEmpty == false {
-				minimizePlaceholder()
-			}
+			setCorrectPlaceholderSize()
 		}
 	}
 
 	public override var attributedText: NSAttributedString? {
 		didSet {
-			if let attrText = attributedText, attrText.string.isEmpty == false {
-				minimizePlaceholder()
-			}
+			setCorrectPlaceholderSize()
 		}
 	}
 
@@ -117,6 +113,14 @@ public class TweePlaceholderTextField: UITextField {
 									   selector: #selector(maximizePlaceholder),
 									   name: .UITextFieldTextDidEndEditing,
 									   object: self)
+	}
+
+	@objc private func setCorrectPlaceholderSize() {
+		if let text = text, text.isEmpty == false {
+			minimizePlaceholder()
+		} else if isEditing == false {
+			maximizePlaceholder()
+		}
 	}
 
 	@objc private func minimizePlaceholder() {
