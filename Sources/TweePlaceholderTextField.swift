@@ -55,6 +55,22 @@ public class TweePlaceholderTextField: UITextField {
 	/// Custom placeholder label. You can use it to style placeholder text.
 	public private(set) lazy var placeholderLabel = UILabel()
 
+	public override var text: String? {
+		didSet {
+			if let text = text, text.isEmpty == false {
+				minimizePlaceholder()
+			}
+		}
+	}
+
+	public override var attributedText: NSAttributedString? {
+		didSet {
+			if let attrText = attributedText, attrText.string.isEmpty == false {
+				minimizePlaceholder()
+			}
+		}
+	}
+
 	// Private
 
 	private var minimizeFontAnimation: FontAnimation!
