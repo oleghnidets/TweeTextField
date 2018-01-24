@@ -5,7 +5,7 @@
 import UIKit
 
 /// An object of the class has a customized placeholder label which has animations on the beginning and ending editing.
-public class TweePlaceholderTextField: UITextField {
+open class TweePlaceholderTextField: UITextField {
 
 	/// Animation type when a user begins editing.
 	/// - immediately: Sets minimum font size immediately when a user begins editing.
@@ -65,7 +65,7 @@ public class TweePlaceholderTextField: UITextField {
 
 	// MARK: Methods
 
-	override public func awakeFromNib() {
+	override open func awakeFromNib() {
 		super.awakeFromNib()
 		initializeTextField()
 	}

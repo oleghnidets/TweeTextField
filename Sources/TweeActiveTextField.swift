@@ -6,7 +6,7 @@ import UIKit
 import QuartzCore
 
 /// An object of the class can show animated bottom line when a user begins editing.
-public class TweeActiveTextField: TweeBorderedTextField {
+open class TweeActiveTextField: TweeBorderedTextField {
 
 	private var activeLine = Line()
 
@@ -37,7 +37,7 @@ public class TweeActiveTextField: TweeBorderedTextField {
 
 	// MARK: Methods
 
-	override public func awakeFromNib() {
+	override open func awakeFromNib() {
 		super.awakeFromNib()
 		initializeTextField()
 	}
