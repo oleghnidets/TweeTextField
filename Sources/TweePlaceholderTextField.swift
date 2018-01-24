@@ -55,13 +55,13 @@ open class TweePlaceholderTextField: UITextField {
 	/// Custom placeholder label. You can use it to style placeholder text.
 	public private(set) lazy var placeholderLabel = UILabel()
 
-	public override var text: String? {
+	open override var text: String? {
 		didSet {
 			setCorrectPlaceholderSize()
 		}
 	}
 
-	public override var attributedText: NSAttributedString? {
+	open override var attributedText: NSAttributedString? {
 		didSet {
 			setCorrectPlaceholderSize()
 		}
