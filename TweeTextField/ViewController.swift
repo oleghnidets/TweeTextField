@@ -22,6 +22,7 @@ final class ViewController: UIViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		usernameTextField.text = "text"
 	}
 
 	@IBAction private func confirm() {

@@ -55,6 +55,18 @@ open class TweePlaceholderTextField: UITextField {
 	/// Custom placeholder label. You can use it to style placeholder text.
 	public private(set) lazy var placeholderLabel = UILabel()
 
+	public override var text: String? {
+		didSet {
+			setCorrectPlaceholderSize()
+		}
+	}
+
+	public override var attributedText: NSAttributedString? {
+		didSet {
+			setCorrectPlaceholderSize()
+		}
+	}
+
 	// Private
 
 	private var minimizeFontAnimation: FontAnimation!
@@ -101,6 +113,14 @@ open class TweePlaceholderTextField: UITextField {
 									   selector: #selector(maximizePlaceholder),
 									   name: .UITextFieldTextDidEndEditing,
 									   object: self)
+	}
+
+	@objc private func setCorrectPlaceholderSize() {
+		if let text = text, text.isEmpty == false {
+			minimizePlaceholder()
+		} else if isEditing == false {
+			maximizePlaceholder()
+		}
 	}
 
 	@objc private func minimizePlaceholder() {
