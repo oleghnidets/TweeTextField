@@ -88,6 +88,7 @@ open class TweePlaceholderTextField: UITextField {
 		minimizeFontAnimation = FontAnimation(target: self, selector: #selector(minimizePlaceholderFontSize))
 		maximizeFontAnimation = FontAnimation(target: self, selector: #selector(maximizePlaceholderFontSize))
 
+		placeholderLabel.font = font ?? placeholderLabel.font
 		placeholderLabel.font = placeholderLabel.font.withSize(originalPlaceholderFontSize)
 	}
 
