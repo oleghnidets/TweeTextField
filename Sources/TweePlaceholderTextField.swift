@@ -172,7 +172,7 @@ open class TweePlaceholderTextField: UITextField {
 			self.maximizeFontAnimation.start()
 		}) { (_) in
 			self.maximizeFontAnimation.stop()
-			// self.placeholderLabel.font = self.placeholderLabel.font.withSize(self.originalPlaceholderFontSize)
+			self.placeholderLabel.font = self.placeholderLabel.font.withSize(self.originalPlaceholderFontSize)
 		}
 	}
 
