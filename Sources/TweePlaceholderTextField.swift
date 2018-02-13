@@ -167,12 +167,12 @@ open class TweePlaceholderTextField: UITextField {
 
 		bottomConstraint?.constant = 0
 
-		UIView.animate(withDuration: placeholderDuration, delay: 0, options: [.preferredFramesPerSecond30], animations: {
+		UIView.animate(withDuration: placeholderDuration, delay: 0, options: [.preferredFramesPerSecond60], animations: {
 			self.layoutIfNeeded()
 			self.maximizeFontAnimation.start()
 		}) { (_) in
 			self.maximizeFontAnimation.stop()
-			self.placeholderLabel.font = self.placeholderLabel.font.withSize(self.originalPlaceholderFontSize)
+//			self.placeholderLabel.font = self.placeholderLabel.font.withSize(self.originalPlaceholderFontSize)
 		}
 	}
 
@@ -187,7 +187,8 @@ open class TweePlaceholderTextField: UITextField {
 		let fontSize = (originalPlaceholderFontSize - minimumPlaceholderFontSize) * percent + minimumPlaceholderFontSize
 
 		DispatchQueue.main.async {
-			self.placeholderLabel.font = self.placeholderLabel.font.withSize(fontSize)
+			let size = min(self.originalPlaceholderFontSize, fontSize)
+			self.placeholderLabel.font = self.placeholderLabel.font.withSize(size)
 		}
 	}
 
