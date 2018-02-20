@@ -1,5 +1,5 @@
-//  Created by Oleg Gnidets on 12/12/17.
-//  Copyright © 2017 Oleg Gnidets. All rights reserved.
+//  Created by Oleg Hnidets on 12/12/17.
+//  Copyright © 2017-2018 Oleg Hnidets. All rights reserved.
 //
 
 import UIKit
@@ -39,6 +39,10 @@ open class TweeAttributedTextField: TweeActiveTextField {
 		plugLabelIfNeeded()
 	}
 
+	/// Shows info label with/without animation.
+	/// - Parameters:
+	///   - text: Custom attributed text to show.
+	///   - animated: By default is `true`.
 	public func showInfo(_ attrText: NSAttributedString, animated: Bool = true) {
 		if animated {
 			UIView.transition(with: infoLabel, duration: infoAnimationDuration, options: [.transitionCrossDissolve], animations: {
@@ -50,7 +54,7 @@ open class TweeAttributedTextField: TweeActiveTextField {
 		}
 	}
 
-	/// Shows info label with animation or not.
+	/// Shows info label with/without animation.
 	/// - Parameters:
 	///   - text: Custom text to show.
 	///   - animated: By default is `true`.

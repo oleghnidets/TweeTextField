@@ -1,5 +1,5 @@
-//  Created by Oleg Gnidets on 12/20/17.
-//  Copyright © 2017 Oleg Gnidets. All rights reserved.
+//  Created by Oleg Hnidets on 12/20/17.
+//  Copyright © 2017-2018 Oleg Hnidets. All rights reserved.
 //
 
 import Foundation
@@ -8,11 +8,11 @@ import CoreFoundation
 
 internal final class FontAnimation {
 
-	private var displayLink: CADisplayLink?
+	private let displayLink: CADisplayLink?
 	private(set) var startTime: CFTimeInterval?
 
-	private var target: Any
-	private var selector: Selector
+	private let target: Any
+	private let selector: Selector
 
 	init(target: Any, selector: Selector) {
 		self.target = target

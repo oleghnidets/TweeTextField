@@ -17,6 +17,7 @@ This is lightweight library that provides different types of Text Fields based o
 - [x] No UITextField behaviours override
 - [x] Clean code with divided functionalities
 - [x] Easy to use and extend
+- [x] Right-to-Left support
 
 ## Requirements
 
