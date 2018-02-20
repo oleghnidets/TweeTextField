@@ -67,6 +67,9 @@ open class TweeBorderedTextField: TweePlaceholderTextField {
 		line.path.addLine(to: endPoint)
 
 		// Layer
-		line.layer.path = line.path.cgPath
+		let interfaceDirection = UIView.userInterfaceLayoutDirection(for: semanticContentAttribute)
+		let path = interfaceDirection == .rightToLeft ? line.path.reversing() : line.path
+
+		line.layer.path = path.cgPath
 	}
 }
