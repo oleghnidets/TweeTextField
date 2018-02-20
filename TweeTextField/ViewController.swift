@@ -8,7 +8,7 @@ extension String {
 
 	var isValidEmail: Bool {
 		let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-		return NSPredicate(format:"SELF MATCHES %@", emailRegEx).evaluate(with: self)
+		return NSPredicate(format: "SELF MATCHES %@", emailRegEx).evaluate(with: self)
 	}
 }
 
@@ -26,7 +26,8 @@ final class ViewController: UIViewController {
 	}
 
 	@IBAction private func confirm() {
-		view.endEditing(true)
+		emailTextField.becomeFirstResponder()
+//		view.endEditing(true)
 	}
 
 	@IBAction private func emailBeginEditing(_ sender: TweeAttributedTextField) {
@@ -41,4 +42,3 @@ final class ViewController: UIViewController {
 		sender.showInfo("Email address is incorrect. Check it out")
 	}
 }
-

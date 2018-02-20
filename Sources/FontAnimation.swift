@@ -14,7 +14,6 @@ internal final class FontAnimation {
 	private var target: Any
 	private var selector: Selector
 
-
 	init(target: Any, selector: Selector) {
 		self.target = target
 		self.selector = selector
