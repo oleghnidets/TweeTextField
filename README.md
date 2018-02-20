@@ -7,6 +7,13 @@ This is lightweight library that provides different types of Text Fields based o
 
 ![Preview](/docs/tweetextfield-sample.gif)
 
+- [Features](#features)
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Communication](#communication)
+- [License](#license)
+
 ## Features
 
 - [x] Customizable placeholder
