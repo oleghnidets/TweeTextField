@@ -41,11 +41,11 @@ You can use [CocoaPods](http://cocoapods.org/) to install `TweeTextField` by add
 pod 'TweeTextField'
 ```
 
-To get the full benefits import `TweeTextField` wherever you import UIKit
+To get the full benefits import `TweeTextField`.
 
 #### Manually
 1. Download and drop `Sources` folder in your project.  
-2. Congratulations!  
+2. Congratulations!
 
 ## Usage
 
@@ -76,13 +76,13 @@ usernameTextField.lineWidth = 2
 
 ## Communication
 
-- If you want to contribute, submit a pull request.
-- If you found a bug, have suggestions or need help, please, open an issue.
+- If you want to contribute, [submit a pull request](https://github.com/oleghnidets/TweeTextField/compare).
+- If you found a bug, have suggestions or need help, please, [open an issue](https://github.com/oleghnidets/TweeTextField/issues/new).
 - If you need help, write me oleg.oleksan@gmail.com.
 - If you want to [give me](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=CVFAEEZJ9DJ3L) some motivation ;] 
 
 ## License
-Distributed under the MIT license. See ``LICENSE`` for more information.
+Distributed under the MIT license. See [LICENSE](https://github.com/oleghnidets/TweeTextField/blob/develop/LICENSE) for more information.
 
 
 [swift-image]:https://img.shields.io/badge/swift-4.0-orange.svg
