@@ -8,11 +8,12 @@ import UIKit
 open class TweePlaceholderTextField: UITextField {
 
 	/// Animation type when a user begins editing.
-	/// - immediately: Sets minimum font size immediately when a user begins editing.
-	/// - smoothly: Sets minimum font size step by step during animation transition when a user begins editing.
 	public enum MinimizationAnimationType {
+		/** Sets minimum font size immediately when a user begins editing. */
 		case immediately
+
 		// Has some performance issue on first launch. Need to investigate how to fix.
+		/** Sets minimum font size step by step during animation transition when a user begins editing */
 		case smoothly
 	}
 
@@ -55,12 +56,14 @@ open class TweePlaceholderTextField: UITextField {
 	/// Custom placeholder label. You can use it to style placeholder text.
 	public private(set) lazy var placeholderLabel = UILabel()
 
+	///	The current text that is displayed by the label.
 	open override var text: String? {
 		didSet {
 			setCorrectPlaceholderSize()
 		}
 	}
 
+	/// The styled text displayed by the text field.
 	open override var attributedText: NSAttributedString? {
 		didSet {
 			setCorrectPlaceholderSize()
@@ -77,6 +80,7 @@ open class TweePlaceholderTextField: UITextField {
 
 	// MARK: Methods
 
+	/// Prepares the receiver for service after it has been loaded from an Interface Builder archive, or nib file.
 	override open func awakeFromNib() {
 		super.awakeFromNib()
 		initializeTextField()

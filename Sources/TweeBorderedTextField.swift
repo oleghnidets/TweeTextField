@@ -39,6 +39,7 @@ open class TweeBorderedTextField: TweePlaceholderTextField {
 
 	// MARK: Methods
 
+	/// Prepares the receiver for service after it has been loaded from an Interface Builder archive, or nib file.
 	override open func awakeFromNib() {
 		super.awakeFromNib()
 		configureBottomLine()
@@ -49,6 +50,7 @@ open class TweeBorderedTextField: TweePlaceholderTextField {
 		layer.addSublayer(line.layer)
 	}
 
+	/// Lays out subviews.
 	override open func layoutSubviews() {
 		super.layoutSubviews()
 		calculateLine(line)

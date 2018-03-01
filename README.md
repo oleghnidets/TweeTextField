@@ -2,6 +2,7 @@
 
 [![Swift Version][swift-image]][swift-url]
 [![License][license-image]][license-url]
+[![Documentation][docs-image]][docs-url]
 
 This is lightweight library that provides different types of Text Fields based on your needs. I was inspired by [Jan Henneberg](https://uimovement.com/ui/2524/input-field-help/). 
 
@@ -89,4 +90,6 @@ Distributed under the MIT license. See [LICENSE](https://github.com/oleghnidets/
 [swift-url]: https://swift.org/
 [license-image]: https://img.shields.io/badge/License-MIT-blue.svg
 [license-url]: LICENSE
+[docs-image]: https://github.com/oleghnidets/TweeTextField/blob/master/docs/badge.svg
+[docs-url]: https://oleghnidets.github.io/TweeTextField
 

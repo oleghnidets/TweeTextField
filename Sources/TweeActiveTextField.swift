@@ -37,6 +37,7 @@ open class TweeActiveTextField: TweeBorderedTextField {
 
 	// MARK: Methods
 
+	/// Prepares the receiver for service after it has been loaded from an Interface Builder archive, or nib file.
 	override open func awakeFromNib() {
 		super.awakeFromNib()
 		initializeTextField()

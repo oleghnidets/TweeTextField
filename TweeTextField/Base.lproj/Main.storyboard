@@ -37,7 +37,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Wz3-0y-Vnd">
                                 <rect key="frame" x="19" y="52" width="337.5" height="160"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ib7-Qf-pz7" customClass="TweeBorderedTextField" customModule="TweeTextField" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ib7-Qf-pz7" customClass="TweeBorderedTextField" customModule="TweeTextField" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="337.5" height="40"/>
                                         <color key="textColor" red="0.43529412150000002" green="0.4431372583" blue="0.47450980539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="CourierNewPS-ItalicMT" family="Courier New" pointSize="17"/>
@@ -158,6 +158,13 @@
                                     <constraint firstItem="Ib7-Qf-pz7" firstAttribute="height" secondItem="SwP-Fd-Fft" secondAttribute="height" id="fMy-5c-WpL"/>
                                 </constraints>
                             </stackView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o5C-EF-Ukv">
+                                <rect key="frame" x="130" y="465" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
