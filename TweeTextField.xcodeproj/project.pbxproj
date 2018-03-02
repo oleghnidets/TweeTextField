@@ -17,7 +17,34 @@
 		92E7FC3F1FE0374600E58DF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92E7FC3D1FE0374600E58DF5 /* Main.storyboard */; };
 		92E7FC411FE0374600E58DF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92E7FC401FE0374600E58DF5 /* Assets.xcassets */; };
 		92E7FC441FE0374600E58DF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92E7FC421FE0374600E58DF5 /* LaunchScreen.storyboard */; };
+		92EA75D9204968D600156E9E /* TweeTextField_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 92EA75D7204968D600156E9E /* TweeTextField_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		92EA75DC204968D600156E9E /* TweeTextField_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92EA75D5204968D600156E9E /* TweeTextField_iOS.framework */; };
+		92EA75DE204968D600156E9E /* TweeTextField_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 92EA75D5204968D600156E9E /* TweeTextField_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		92EA75DA204968D600156E9E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 92E7FC2E1FE0374500E58DF5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 92EA75D4204968D600156E9E;
+			remoteInfo = "TweeTextField-iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		92EA75DD204968D600156E9E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				92EA75DE204968D600156E9E /* TweeTextField_iOS.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		92A146071FEC228900CEADAA /* TweePlaceholderTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweePlaceholderTextField.swift; sourceTree = "<group>"; };
@@ -32,10 +59,21 @@
 		92E7FC401FE0374600E58DF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		92E7FC431FE0374600E58DF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		92E7FC451FE0374600E58DF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92EA75D5204968D600156E9E /* TweeTextField_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TweeTextField_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		92EA75D7204968D600156E9E /* TweeTextField_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TweeTextField_iOS.h; sourceTree = "<group>"; };
+		92EA75D8204968D600156E9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		92E7FC331FE0374500E58DF5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92EA75DC204968D600156E9E /* TweeTextField_iOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92EA75D1204968D600156E9E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -71,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				92E7FC381FE0374600E58DF5 /* TweeTextField */,
+				92EA75D6204968D600156E9E /* TweeTextField-iOS */,
 				92E7FC371FE0374500E58DF5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -79,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				92E7FC361FE0374500E58DF5 /* TweeTextField.app */,
+				92EA75D5204968D600156E9E /* TweeTextField_iOS.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,7 +135,27 @@
 			path = TweeTextField;
 			sourceTree = "<group>";
 		};
+		92EA75D6204968D600156E9E /* TweeTextField-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				92EA75D7204968D600156E9E /* TweeTextField_iOS.h */,
+				92EA75D8204968D600156E9E /* Info.plist */,
+			);
+			path = "TweeTextField-iOS";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		92EA75D2204968D600156E9E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92EA75D9204968D600156E9E /* TweeTextField_iOS.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		92E7FC351FE0374500E58DF5 /* TweeTextField */ = {
@@ -106,15 +166,35 @@
 				92E7FC331FE0374500E58DF5 /* Frameworks */,
 				92E7FC341FE0374500E58DF5 /* Resources */,
 				9216E14D203C376B00ECD005 /* Run Script - SwiftLint */,
+				92EA75DD204968D600156E9E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				92EA75DB204968D600156E9E /* PBXTargetDependency */,
 			);
 			name = TweeTextField;
 			productName = BouncedTextField;
 			productReference = 92E7FC361FE0374500E58DF5 /* TweeTextField.app */;
 			productType = "com.apple.product-type.application";
+		};
+		92EA75D4204968D600156E9E /* TweeTextField-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92EA75E1204968D600156E9E /* Build configuration list for PBXNativeTarget "TweeTextField-iOS" */;
+			buildPhases = (
+				92EA75D0204968D600156E9E /* Sources */,
+				92EA75D1204968D600156E9E /* Frameworks */,
+				92EA75D2204968D600156E9E /* Headers */,
+				92EA75D3204968D600156E9E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TweeTextField-iOS";
+			productName = "TweeTextField-iOS";
+			productReference = 92EA75D5204968D600156E9E /* TweeTextField_iOS.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -127,6 +207,10 @@
 				ORGANIZATIONNAME = "Oleg Gnidets";
 				TargetAttributes = {
 					92E7FC351FE0374500E58DF5 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					92EA75D4204968D600156E9E = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
@@ -146,6 +230,7 @@
 			projectRoot = "";
 			targets = (
 				92E7FC351FE0374500E58DF5 /* TweeTextField */,
+				92EA75D4204968D600156E9E /* TweeTextField-iOS */,
 			);
 		};
 /* End PBXProject section */
@@ -158,6 +243,13 @@
 				92E7FC441FE0374600E58DF5 /* LaunchScreen.storyboard in Resources */,
 				92E7FC411FE0374600E58DF5 /* Assets.xcassets in Resources */,
 				92E7FC3F1FE0374600E58DF5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92EA75D3204968D600156E9E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,7 +287,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		92EA75D0204968D600156E9E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		92EA75DB204968D600156E9E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 92EA75D4204968D600156E9E /* TweeTextField-iOS */;
+			targetProxy = 92EA75DA204968D600156E9E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		92E7FC3D1FE0374600E58DF5 /* Main.storyboard */ = {
@@ -356,6 +463,56 @@
 			};
 			name = Release;
 		};
+		92EA75DF204968D600156E9E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 4LZBFVML4B;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "TweeTextField-iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.com.TweeTextField-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		92EA75E0204968D600156E9E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 4LZBFVML4B;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "TweeTextField-iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.com.TweeTextField-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -373,6 +530,15 @@
 			buildConfigurations = (
 				92E7FC491FE0374600E58DF5 /* Debug */,
 				92E7FC4A1FE0374600E58DF5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		92EA75E1204968D600156E9E /* Build configuration list for PBXNativeTarget "TweeTextField-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92EA75DF204968D600156E9E /* Debug */,
+				92EA75E0204968D600156E9E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
