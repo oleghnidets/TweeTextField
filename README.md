@@ -1,6 +1,7 @@
 # TweeTextField
 
 [![Swift Version][swift-image]][swift-url]
+[![Build][build-image]][build-url]
 [![Platform][platform-image]][platform-url]
 [![Documentation][docs-image]][docs-url]
 [![Pod][pod-image]][pod-url]
@@ -64,7 +65,7 @@ Run `carthage update` to build the framework and drag the built `TweeTextField.f
 #### Manually
 1. Download the [code](https://github.com/oleghnidets/TweeTextField/archive/master.zip).
 2. Drag and drop sources in your project.
-3. Import the library in code by `import TweeTextField`
+3. Import the library in code by `import TweeTextField`.
 
 ## Usage
 
@@ -104,7 +105,7 @@ usernameTextField.lineWidth = 2
 Distributed under the MIT license. See [LICENSE](https://github.com/oleghnidets/TweeTextField/blob/develop/LICENSE) for more information.
 
 
-[swift-image]:https://img.shields.io/badge/swift-4.0-orange.svg
+[swift-image]: https://img.shields.io/badge/swift-4.0-orange.svg
 [swift-url]: https://swift.org/
 [license-image]: https://img.shields.io/badge/License-MIT-blue.svg
 [license-url]: LICENSE
@@ -116,3 +117,5 @@ Distributed under the MIT license. See [LICENSE](https://github.com/oleghnidets/
 [pod-url]: http://cocoapods.org/
 [carthage-image]: https://img.shields.io/badge/carthage-%E2%9C%93-orange.svg
 [carthage-url]: https://github.com/Carthage/Carthage
+[build-image]: https://travis-ci.org/oleghnidets/TweeTextField.svg?branch=master
+[build-url]: https://travis-ci.org/oleghnidets/TweeTextField
