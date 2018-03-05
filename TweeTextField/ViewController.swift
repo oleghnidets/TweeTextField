@@ -22,12 +22,11 @@ final class ViewController: UIViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		usernameTextField.text = "text"
+//		usernameTextField.text = "text"
 	}
 
 	@IBAction private func confirm() {
-		emailTextField.becomeFirstResponder()
-//		view.endEditing(true)
+		emailTextField.text = "Issue #8"
 	}
 
 	@IBAction private func emailBeginEditing(_ sender: TweeAttributedTextField) {
