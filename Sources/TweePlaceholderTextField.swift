@@ -70,6 +70,18 @@ open class TweePlaceholderTextField: UITextField {
 		}
 	}
 
+	open override var textAlignment: NSTextAlignment {
+		didSet {
+			placeholderLabel.textAlignment = textAlignment
+		}
+	}
+
+	open override var font: UIFont? {
+		didSet {
+			configurePlaceholderFont()
+		}
+	}
+
 	// Private
 
 	private var minimizeFontAnimation: FontAnimation!
@@ -92,6 +104,16 @@ open class TweePlaceholderTextField: UITextField {
 		minimizeFontAnimation = FontAnimation(target: self, selector: #selector(minimizePlaceholderFontSize))
 		maximizeFontAnimation = FontAnimation(target: self, selector: #selector(maximizePlaceholderFontSize))
 
+		configurePlaceholderLabel()
+	}
+
+	// Need to investigate and make code better.
+	private func configurePlaceholderLabel() {
+		placeholderLabel.textAlignment = textAlignment
+		configurePlaceholderFont()
+	}
+
+	private func configurePlaceholderFont() {
 		placeholderLabel.font = font ?? placeholderLabel.font
 		placeholderLabel.font = placeholderLabel.font.withSize(originalPlaceholderFontSize)
 	}
@@ -205,7 +227,7 @@ open class TweePlaceholderTextField: UITextField {
 		placeholderLabel.translatesAutoresizingMaskIntoConstraints = false
 
 		placeholderLabel.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
-		placeholderLabel.trailingAnchor.constraint(lessThanOrEqualTo: trailingAnchor).isActive = true
+		placeholderLabel.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
 		bottomConstraint = placeholderLabel.bottomAnchor.constraint(equalTo: bottomAnchor)
 		bottomConstraint?.isActive = true
 
