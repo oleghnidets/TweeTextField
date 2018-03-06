@@ -70,12 +70,14 @@ open class TweePlaceholderTextField: UITextField {
 		}
 	}
 
+	/// The technique to use for aligning the text.
 	open override var textAlignment: NSTextAlignment {
 		didSet {
 			placeholderLabel.textAlignment = textAlignment
 		}
 	}
 
+	/// The font used to display the text.
 	open override var font: UIFont? {
 		didSet {
 			configurePlaceholderFont()
