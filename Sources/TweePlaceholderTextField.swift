@@ -17,8 +17,6 @@ open class TweePlaceholderTextField: UITextField {
 		case smoothly
 	}
 
-	// Public
-
 	/// Default is `immediately`.
 	public var minimizationAnimationType: MinimizationAnimationType = .immediately
 	/// Minimum font size for the custom placeholder.
@@ -84,23 +82,23 @@ open class TweePlaceholderTextField: UITextField {
 		}
 	}
 
-	// Private
-
 	private var minimizeFontAnimation: FontAnimation!
-
 	private var maximizeFontAnimation: FontAnimation!
-
 	private var bottomConstraint: NSLayoutConstraint?
 
 	// MARK: Methods
 
-	/// Prepares the receiver for service after it has been loaded from an Interface Builder archive, or nib file.
-	override open func awakeFromNib() {
-		super.awakeFromNib()
-		initializeTextField()
+	public override init(frame: CGRect) {
+		super.init(frame: frame)
+		initializeSetup()
 	}
 
-	private func initializeTextField() {
+	public required init?(coder aDecoder: NSCoder) {
+		super.init(coder: aDecoder)
+		initializeSetup()
+	}
+
+	private func initializeSetup() {
 		observe()
 
 		minimizeFontAnimation = FontAnimation(target: self, selector: #selector(minimizePlaceholderFontSize))

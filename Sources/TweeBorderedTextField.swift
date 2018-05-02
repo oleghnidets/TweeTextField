@@ -13,8 +13,6 @@ internal class Line {
 /// An object of the class can show bottom line permanently.
 open class TweeBorderedTextField: TweePlaceholderTextField {
 
-	private var line = Line()
-
 	/// Color of bottom line.
 	@IBInspectable public var lineColor: UIColor {
 		get {
@@ -37,11 +35,21 @@ open class TweeBorderedTextField: TweePlaceholderTextField {
 		}
 	}
 
+	private var line = Line()
+
 	// MARK: Methods
 
-	/// Prepares the receiver for service after it has been loaded from an Interface Builder archive, or nib file.
-	override open func awakeFromNib() {
-		super.awakeFromNib()
+	public override init(frame: CGRect) {
+		super.init(frame: frame)
+		initializeSetup()
+	}
+
+	public required init?(coder aDecoder: NSCoder) {
+		super.init(coder: aDecoder)
+		initializeSetup()
+	}
+
+	private func initializeSetup() {
 		configureBottomLine()
 	}
 

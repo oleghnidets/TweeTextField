@@ -8,8 +8,6 @@ import QuartzCore
 /// An object of the class can show animated bottom line when a user begins editing.
 open class TweeActiveTextField: TweeBorderedTextField {
 
-	private var activeLine = Line()
-
 	/// Color of line that appears when a user begins editing.
 	@IBInspectable public var activeLineColor: UIColor {
 		get {
@@ -35,15 +33,21 @@ open class TweeActiveTextField: TweeBorderedTextField {
 	/// Width of line that appears when a user begins editing.
 	@IBInspectable public private(set) var animationDuration: Double = 1
 
+	private var activeLine = Line()
+
 	// MARK: Methods
 
-	/// Prepares the receiver for service after it has been loaded from an Interface Builder archive, or nib file.
-	override open func awakeFromNib() {
-		super.awakeFromNib()
-		initializeTextField()
+	public override init(frame: CGRect) {
+		super.init(frame: frame)
+		initializeSetup()
 	}
 
-	private func initializeTextField() {
+	public required init?(coder aDecoder: NSCoder) {
+		super.init(coder: aDecoder)
+		initializeSetup()
+	}
+
+	private func initializeSetup() {
 		observe()
 		configureActiveLine()
 	}

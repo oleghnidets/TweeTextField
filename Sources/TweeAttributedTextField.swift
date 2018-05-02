@@ -34,10 +34,18 @@ open class TweeAttributedTextField: TweeActiveTextField {
 
 	// MARK: Methods
 
-	/// Prepares the receiver for service after it has been loaded from an Interface Builder archive, or nib file.
-	override open func awakeFromNib() {
-		super.awakeFromNib()
-		plugLabelIfNeeded()
+	public override init(frame: CGRect) {
+		super.init(frame: frame)
+		initializeSetup()
+	}
+
+	public required init?(coder aDecoder: NSCoder) {
+		super.init(coder: aDecoder)
+		initializeSetup()
+	}
+
+	private func initializeSetup() {
+		plugInfoLabel()
 	}
 
 	/// Shows info label with/without animation.
@@ -82,7 +90,7 @@ open class TweeAttributedTextField: TweeActiveTextField {
 		}
 	}
 
-	private func plugLabelIfNeeded() {
+	private func plugInfoLabel() {
 		if infoLabel.superview != nil {
 			return
 		}
