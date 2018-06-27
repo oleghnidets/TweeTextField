@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C065D2F20E3EFCD00B8F983 /* TweeTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C065D2D20E3EFCD00B8F983 /* TweeTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7C065D3220E3EFCD00B8F983 /* TweeTextField.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C065D2B20E3EFCD00B8F983 /* TweeTextField.framework */; };
+		7C065D3320E3EFCD00B8F983 /* TweeTextField.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7C065D2B20E3EFCD00B8F983 /* TweeTextField.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7C065D3720E3F02C00B8F983 /* TweePlaceholderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A146071FEC228900CEADAA /* TweePlaceholderTextField.swift */; };
+		7C065D3820E3F02C00B8F983 /* TweeBorderedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A146081FEC228900CEADAA /* TweeBorderedTextField.swift */; };
+		7C065D3920E3F02C00B8F983 /* TweeAttributedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A146091FEC228900CEADAA /* TweeAttributedTextField.swift */; };
+		7C065D3A20E3F02C00B8F983 /* TweeActiveTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A1460A1FEC228900CEADAA /* TweeActiveTextField.swift */; };
+		7C065D3B20E3F02C00B8F983 /* FontAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A1460B1FEC228900CEADAA /* FontAnimation.swift */; };
 		92A1460C1FEC228900CEADAA /* TweePlaceholderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A146071FEC228900CEADAA /* TweePlaceholderTextField.swift */; };
 		92A1460D1FEC228900CEADAA /* TweeBorderedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A146081FEC228900CEADAA /* TweeBorderedTextField.swift */; };
 		92A1460E1FEC228900CEADAA /* TweeAttributedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A146091FEC228900CEADAA /* TweeAttributedTextField.swift */; };
@@ -17,18 +25,15 @@
 		92E7FC3F1FE0374600E58DF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92E7FC3D1FE0374600E58DF5 /* Main.storyboard */; };
 		92E7FC411FE0374600E58DF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92E7FC401FE0374600E58DF5 /* Assets.xcassets */; };
 		92E7FC441FE0374600E58DF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92E7FC421FE0374600E58DF5 /* LaunchScreen.storyboard */; };
-		92EA75D9204968D600156E9E /* TweeTextField_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 92EA75D7204968D600156E9E /* TweeTextField_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		92EA75DC204968D600156E9E /* TweeTextField_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92EA75D5204968D600156E9E /* TweeTextField_iOS.framework */; };
-		92EA75DE204968D600156E9E /* TweeTextField_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 92EA75D5204968D600156E9E /* TweeTextField_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		92EA75DA204968D600156E9E /* PBXContainerItemProxy */ = {
+		7C065D3020E3EFCD00B8F983 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 92E7FC2E1FE0374500E58DF5 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 92EA75D4204968D600156E9E;
-			remoteInfo = "TweeTextField-iOS";
+			remoteGlobalIDString = 7C065D2A20E3EFCD00B8F983;
+			remoteInfo = TweeTextField;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -39,7 +44,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				92EA75DE204968D600156E9E /* TweeTextField_iOS.framework in Embed Frameworks */,
+				7C065D3320E3EFCD00B8F983 /* TweeTextField.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -47,42 +52,53 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7C065D2B20E3EFCD00B8F983 /* TweeTextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TweeTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C065D2D20E3EFCD00B8F983 /* TweeTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TweeTextField.h; sourceTree = "<group>"; };
+		7C065D2E20E3EFCD00B8F983 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92A146071FEC228900CEADAA /* TweePlaceholderTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweePlaceholderTextField.swift; sourceTree = "<group>"; };
 		92A146081FEC228900CEADAA /* TweeBorderedTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweeBorderedTextField.swift; sourceTree = "<group>"; };
 		92A146091FEC228900CEADAA /* TweeAttributedTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweeAttributedTextField.swift; sourceTree = "<group>"; };
 		92A1460A1FEC228900CEADAA /* TweeActiveTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweeActiveTextField.swift; sourceTree = "<group>"; };
 		92A1460B1FEC228900CEADAA /* FontAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontAnimation.swift; sourceTree = "<group>"; };
-		92E7FC361FE0374500E58DF5 /* TweeTextField.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TweeTextField.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		92E7FC361FE0374500E58DF5 /* TweeTextField-Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TweeTextField-Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		92E7FC391FE0374600E58DF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92E7FC3B1FE0374600E58DF5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		92E7FC3E1FE0374600E58DF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		92E7FC401FE0374600E58DF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		92E7FC431FE0374600E58DF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		92E7FC451FE0374600E58DF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		92EA75D5204968D600156E9E /* TweeTextField_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TweeTextField_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		92EA75D7204968D600156E9E /* TweeTextField_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TweeTextField_iOS.h; sourceTree = "<group>"; };
 		92EA75D8204968D600156E9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		7C065D2720E3EFCD00B8F983 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		92E7FC331FE0374500E58DF5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92EA75DC204968D600156E9E /* TweeTextField_iOS.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		92EA75D1204968D600156E9E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				7C065D3220E3EFCD00B8F983 /* TweeTextField.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7C065D2C20E3EFCD00B8F983 /* TweeTextField */ = {
+			isa = PBXGroup;
+			children = (
+				7C065D2D20E3EFCD00B8F983 /* TweeTextField.h */,
+				7C065D2E20E3EFCD00B8F983 /* Info.plist */,
+			);
+			path = TweeTextField;
+			sourceTree = "<group>";
+		};
 		921B72B21FEAB72200370DD6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +126,7 @@
 			children = (
 				92E7FC381FE0374600E58DF5 /* TweeTextField */,
 				92EA75D6204968D600156E9E /* TweeTextField-iOS */,
+				7C065D2C20E3EFCD00B8F983 /* TweeTextField */,
 				92E7FC371FE0374500E58DF5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -117,8 +134,8 @@
 		92E7FC371FE0374500E58DF5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				92E7FC361FE0374500E58DF5 /* TweeTextField.app */,
-				92EA75D5204968D600156E9E /* TweeTextField_iOS.framework */,
+				92E7FC361FE0374500E58DF5 /* TweeTextField-Sample.app */,
+				7C065D2B20E3EFCD00B8F983 /* TweeTextField.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -147,20 +164,38 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		92EA75D2204968D600156E9E /* Headers */ = {
+		7C065D2820E3EFCD00B8F983 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92EA75D9204968D600156E9E /* TweeTextField_iOS.h in Headers */,
+				7C065D2F20E3EFCD00B8F983 /* TweeTextField.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		92E7FC351FE0374500E58DF5 /* TweeTextField */ = {
+		7C065D2A20E3EFCD00B8F983 /* TweeTextField */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 92E7FC481FE0374600E58DF5 /* Build configuration list for PBXNativeTarget "TweeTextField" */;
+			buildConfigurationList = 7C065D3420E3EFCD00B8F983 /* Build configuration list for PBXNativeTarget "TweeTextField" */;
+			buildPhases = (
+				7C065D2620E3EFCD00B8F983 /* Sources */,
+				7C065D2720E3EFCD00B8F983 /* Frameworks */,
+				7C065D2820E3EFCD00B8F983 /* Headers */,
+				7C065D2920E3EFCD00B8F983 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TweeTextField;
+			productName = TweeTextField;
+			productReference = 7C065D2B20E3EFCD00B8F983 /* TweeTextField.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		92E7FC351FE0374500E58DF5 /* TweeTextField-Sample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92E7FC481FE0374600E58DF5 /* Build configuration list for PBXNativeTarget "TweeTextField-Sample" */;
 			buildPhases = (
 				92E7FC321FE0374500E58DF5 /* Sources */,
 				92E7FC331FE0374500E58DF5 /* Frameworks */,
@@ -171,30 +206,12 @@
 			buildRules = (
 			);
 			dependencies = (
-				92EA75DB204968D600156E9E /* PBXTargetDependency */,
+				7C065D3120E3EFCD00B8F983 /* PBXTargetDependency */,
 			);
-			name = TweeTextField;
+			name = "TweeTextField-Sample";
 			productName = BouncedTextField;
-			productReference = 92E7FC361FE0374500E58DF5 /* TweeTextField.app */;
+			productReference = 92E7FC361FE0374500E58DF5 /* TweeTextField-Sample.app */;
 			productType = "com.apple.product-type.application";
-		};
-		92EA75D4204968D600156E9E /* TweeTextField-iOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 92EA75E1204968D600156E9E /* Build configuration list for PBXNativeTarget "TweeTextField-iOS" */;
-			buildPhases = (
-				92EA75D0204968D600156E9E /* Sources */,
-				92EA75D1204968D600156E9E /* Frameworks */,
-				92EA75D2204968D600156E9E /* Headers */,
-				92EA75D3204968D600156E9E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "TweeTextField-iOS";
-			productName = "TweeTextField-iOS";
-			productReference = 92EA75D5204968D600156E9E /* TweeTextField_iOS.framework */;
-			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -206,11 +223,11 @@
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Oleg Gnidets";
 				TargetAttributes = {
-					92E7FC351FE0374500E58DF5 = {
-						CreatedOnToolsVersion = 9.2;
+					7C065D2A20E3EFCD00B8F983 = {
+						CreatedOnToolsVersion = 9.4;
 						ProvisioningStyle = Automatic;
 					};
-					92EA75D4204968D600156E9E = {
+					92E7FC351FE0374500E58DF5 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
@@ -229,13 +246,20 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				92E7FC351FE0374500E58DF5 /* TweeTextField */,
-				92EA75D4204968D600156E9E /* TweeTextField-iOS */,
+				92E7FC351FE0374500E58DF5 /* TweeTextField-Sample */,
+				7C065D2A20E3EFCD00B8F983 /* TweeTextField */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		7C065D2920E3EFCD00B8F983 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		92E7FC341FE0374500E58DF5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -243,13 +267,6 @@
 				92E7FC441FE0374600E58DF5 /* LaunchScreen.storyboard in Resources */,
 				92E7FC411FE0374600E58DF5 /* Assets.xcassets in Resources */,
 				92E7FC3F1FE0374600E58DF5 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		92EA75D3204968D600156E9E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +290,18 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		7C065D2620E3EFCD00B8F983 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C065D3720E3F02C00B8F983 /* TweePlaceholderTextField.swift in Sources */,
+				7C065D3820E3F02C00B8F983 /* TweeBorderedTextField.swift in Sources */,
+				7C065D3920E3F02C00B8F983 /* TweeAttributedTextField.swift in Sources */,
+				7C065D3A20E3F02C00B8F983 /* TweeActiveTextField.swift in Sources */,
+				7C065D3B20E3F02C00B8F983 /* FontAnimation.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		92E7FC321FE0374500E58DF5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -287,20 +316,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		92EA75D0204968D600156E9E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		92EA75DB204968D600156E9E /* PBXTargetDependency */ = {
+		7C065D3120E3EFCD00B8F983 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 92EA75D4204968D600156E9E /* TweeTextField-iOS */;
-			targetProxy = 92EA75DA204968D600156E9E /* PBXContainerItemProxy */;
+			target = 7C065D2A20E3EFCD00B8F983 /* TweeTextField */;
+			targetProxy = 7C065D3020E3EFCD00B8F983 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -326,6 +348,58 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		7C065D3520E3EFCD00B8F983 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 4LZBFVML4B;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = TweeTextField/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.com.tweetextfield;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7C065D3620E3EFCD00B8F983 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 4LZBFVML4B;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = TweeTextField/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.com.tweetextfield;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		92E7FC461FE0374600E58DF5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -440,12 +514,13 @@
 		92E7FC491FE0374600E58DF5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4LZBFVML4B;
 				INFOPLIST_FILE = "$(SRCROOT)/TweeTextField/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.com.tweefield;
+				PRODUCT_BUNDLE_IDENTIFIER = com.com.tweetextfield;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -455,71 +530,31 @@
 		92E7FC4A1FE0374600E58DF5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4LZBFVML4B;
 				INFOPLIST_FILE = "$(SRCROOT)/TweeTextField/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.com.tweefield;
+				PRODUCT_BUNDLE_IDENTIFIER = com.com.tweetextfield;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
-		92EA75DF204968D600156E9E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 4LZBFVML4B;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "TweeTextField-iOS/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.com.TweeTextField-iOS";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		92EA75E0204968D600156E9E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 4LZBFVML4B;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "TweeTextField-iOS/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.com.TweeTextField-iOS";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		7C065D3420E3EFCD00B8F983 /* Build configuration list for PBXNativeTarget "TweeTextField" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7C065D3520E3EFCD00B8F983 /* Debug */,
+				7C065D3620E3EFCD00B8F983 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		92E7FC311FE0374500E58DF5 /* Build configuration list for PBXProject "TweeTextField" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -529,20 +564,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		92E7FC481FE0374600E58DF5 /* Build configuration list for PBXNativeTarget "TweeTextField" */ = {
+		92E7FC481FE0374600E58DF5 /* Build configuration list for PBXNativeTarget "TweeTextField-Sample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				92E7FC491FE0374600E58DF5 /* Debug */,
 				92E7FC4A1FE0374600E58DF5 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		92EA75E1204968D600156E9E /* Build configuration list for PBXNativeTarget "TweeTextField-iOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				92EA75DF204968D600156E9E /* Debug */,
-				92EA75E0204968D600156E9E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
