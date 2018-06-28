@@ -31,7 +31,7 @@ open class TweeActiveTextField: TweeBorderedTextField {
 	}
 
 	/// Width of line that appears when a user begins editing.
-	@IBInspectable public private(set) var animationDuration: Double = 1
+	@IBInspectable public var animationDuration: Double = 1
 
 	private var activeLine = Line()
 

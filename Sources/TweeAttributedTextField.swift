@@ -12,7 +12,7 @@ open class TweeAttributedTextField: TweeActiveTextField {
 	public private(set) lazy var infoLabel = UILabel()
 
 	/// Animation duration for showing and hiding the info label.
-	@IBInspectable public private(set) var infoAnimationDuration: Double = 1
+	@IBInspectable public var infoAnimationDuration: Double = 1
 
 	/// Color of info text.
 	@IBInspectable public var infoTextColor: UIColor {
