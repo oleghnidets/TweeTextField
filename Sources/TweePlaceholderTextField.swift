@@ -20,11 +20,11 @@ open class TweePlaceholderTextField: UITextField {
 	/// Default is `immediately`.
 	public var minimizationAnimationType: MinimizationAnimationType = .immediately
 	/// Minimum font size for the custom placeholder.
-	@IBInspectable public private(set) var minimumPlaceholderFontSize: CGFloat = 12
+	@IBInspectable public var minimumPlaceholderFontSize: CGFloat = 12
 	/// Original (maximum) font size for the custom placeholder.
-	@IBInspectable public private(set) var originalPlaceholderFontSize: CGFloat = 17
+	@IBInspectable public var originalPlaceholderFontSize: CGFloat = 17
 	/// Placeholder animation duration.
-	@IBInspectable public private(set) var placeholderDuration: Double = 0.5
+	@IBInspectable public var placeholderDuration: Double = 0.5
 	/// Color of custom placeholder.
 	@IBInspectable public var placeholderColor: UIColor? {
 		get {
