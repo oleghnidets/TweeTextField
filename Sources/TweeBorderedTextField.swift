@@ -41,12 +41,20 @@ open class TweeBorderedTextField: TweePlaceholderTextField {
 
 	public override init(frame: CGRect) {
 		super.init(frame: frame)
+
 		initializeSetup()
 	}
 
 	public required init?(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder)
+
 		initializeSetup()
+	}
+
+	override open func layoutSubviews() {
+		super.layoutSubviews()
+
+		calculateLine(line)
 	}
 
 	private func initializeSetup() {
@@ -56,12 +64,6 @@ open class TweeBorderedTextField: TweePlaceholderTextField {
 	private func configureBottomLine() {
 		line.layer.fillColor = UIColor.clear.cgColor
 		layer.addSublayer(line.layer)
-	}
-
-	/// Lays out subviews.
-	override open func layoutSubviews() {
-		super.layoutSubviews()
-		calculateLine(line)
 	}
 
 	internal func calculateLine(_ line: Line) {

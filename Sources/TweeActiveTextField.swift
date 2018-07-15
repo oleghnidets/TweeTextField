@@ -39,12 +39,24 @@ open class TweeActiveTextField: TweeBorderedTextField {
 
 	public override init(frame: CGRect) {
 		super.init(frame: frame)
+
 		initializeSetup()
 	}
 
 	public required init?(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder)
+
 		initializeSetup()
+	}
+
+	open override func layoutSubviews() {
+		super.layoutSubviews()
+
+		guard isEditing else {
+			return
+		}
+
+		calculateLine(activeLine)
 	}
 
 	private func initializeSetup() {
@@ -85,7 +97,6 @@ open class TweeActiveTextField: TweeBorderedTextField {
 }
 
 private extension CABasicAnimation {
-
 	convenience init(path: String, fromValue: Any?, toValue: Any?, duration: CFTimeInterval) {
 		self.init(keyPath: path)
 

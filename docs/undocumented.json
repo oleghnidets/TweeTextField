@@ -9,8 +9,15 @@
     },
     {
       "file": "/Users/oleg/Desktop/start/my-projects/TweeTextField/Sources/TweeActiveTextField.swift",
-      "line": 45,
+      "line": 46,
       "symbol": "TweeActiveTextField.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/oleg/Desktop/start/my-projects/TweeTextField/Sources/TweeActiveTextField.swift",
+      "line": 52,
+      "symbol": "TweeActiveTextField.layoutSubviews()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -23,7 +30,7 @@
     },
     {
       "file": "/Users/oleg/Desktop/start/my-projects/TweeTextField/Sources/TweeAttributedTextField.swift",
-      "line": 42,
+      "line": 43,
       "symbol": "TweeAttributedTextField.init(coder:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -37,22 +44,36 @@
     },
     {
       "file": "/Users/oleg/Desktop/start/my-projects/TweeTextField/Sources/TweeBorderedTextField.swift",
-      "line": 47,
+      "line": 48,
       "symbol": "TweeBorderedTextField.init(coder:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
+      "file": "/Users/oleg/Desktop/start/my-projects/TweeTextField/Sources/TweeBorderedTextField.swift",
+      "line": 54,
+      "symbol": "TweeBorderedTextField.layoutSubviews()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/oleg/Desktop/start/my-projects/TweeTextField/Sources/TweePlaceholderTextField.swift",
-      "line": 91,
+      "line": 94,
       "symbol": "TweePlaceholderTextField.init(frame:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/oleg/Desktop/start/my-projects/TweeTextField/Sources/TweePlaceholderTextField.swift",
-      "line": 96,
+      "line": 100,
       "symbol": "TweePlaceholderTextField.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/oleg/Desktop/start/my-projects/TweeTextField/Sources/TweePlaceholderTextField.swift",
+      "line": 106,
+      "symbol": "TweePlaceholderTextField.awakeFromNib()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     }
