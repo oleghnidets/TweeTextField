@@ -242,7 +242,7 @@ open class TweePlaceholderTextField: UITextField {
 		placeholderLabel.translatesAutoresizingMaskIntoConstraints = false
 
 		NSLayoutConstraint.activate([
-			placeholderLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
+			placeholderLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8),
 			placeholderLabel.trailingAnchor.constraint(equalTo: trailingAnchor)
 			])
 
@@ -256,7 +256,7 @@ open class TweePlaceholderTextField: UITextField {
 
 		disablePlaceholderHeightConstraint()
 
-		placeholderLabel.bottomAnchor.constraint(equalTo: placeholderLayoutGuide.topAnchor).isActive = true
+		placeholderLabel.bottomAnchor.constraint(equalTo: placeholderLayoutGuide.topAnchor, constant: -2).isActive = true
 
 		let centerYConstraint = placeholderLabel.centerYAnchor.constraint(equalTo: centerYAnchor)
 		centerYConstraint.priority = .defaultHigh
