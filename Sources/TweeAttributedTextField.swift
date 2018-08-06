@@ -36,11 +36,13 @@ open class TweeAttributedTextField: TweeActiveTextField {
 
 	public override init(frame: CGRect) {
 		super.init(frame: frame)
+
 		initializeSetup()
 	}
 
 	public required init?(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder)
+
 		initializeSetup()
 	}
 
@@ -91,7 +93,7 @@ open class TweeAttributedTextField: TweeActiveTextField {
 	}
 
 	private func plugInfoLabel() {
-		if infoLabel.superview != nil {
+		guard infoLabel.superview == nil else {
 			return
 		}
 

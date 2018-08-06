@@ -23,6 +23,10 @@ final class ViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 //		usernameTextField.text = "text"
+//		usernameTextField.tweePlaceholder = "User name"
+
+		passwordTextField.text = "password"
+		emailTextField.text = "text"
 	}
 
 	@IBAction private func confirm() {
