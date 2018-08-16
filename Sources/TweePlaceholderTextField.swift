@@ -52,6 +52,8 @@ open class TweePlaceholderTextField: UITextField {
 		}
 	}
 
+	public var placeholderInsets: UIEdgeInsets = .zero
+
 	/// Custom placeholder label. You can use it to style placeholder text.
 	public private(set) lazy var placeholderLabel = UILabel()
 
@@ -87,6 +89,9 @@ open class TweePlaceholderTextField: UITextField {
 	private lazy var maximizeFontAnimation = FontAnimation(target: self, selector: #selector(maximizePlaceholderFontSize))
 
 	private let placeholderLayoutGuide = UILayoutGuide()
+	private var leadingPlaceholderConstraint: NSLayoutConstraint?
+	private var trailingPlaceholderConstraint: NSLayoutConstraint?
+
 	private var placeholderGuideHeightConstraint: NSLayoutConstraint?
 
 	// MARK: Methods
@@ -108,6 +113,12 @@ open class TweePlaceholderTextField: UITextField {
 
 		configurePlaceholderLabel()
 		setPlaceholderSizeImmediately()
+	}
+
+	open override func layoutSubviews() {
+		super.layoutSubviews()
+
+		configurePlaceholderInsets()
 	}
 
 	private func initializeSetup() {
@@ -213,7 +224,6 @@ open class TweePlaceholderTextField: UITextField {
 			self.maximizeFontAnimation.start()
 		}, completion: { _ in
 			self.maximizeFontAnimation.stop()
-//			self.placeholderLabel.font = self.placeholderLabel.font.withSize(self.originalPlaceholderFontSize)
 		})
 	}
 
@@ -241,10 +251,11 @@ open class TweePlaceholderTextField: UITextField {
 		addSubview(placeholderLabel)
 		placeholderLabel.translatesAutoresizingMaskIntoConstraints = false
 
-		NSLayoutConstraint.activate([
-			placeholderLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
-			placeholderLabel.trailingAnchor.constraint(equalTo: trailingAnchor)
-			])
+		leadingPlaceholderConstraint = placeholderLabel.leadingAnchor.constraint(equalTo: leadingAnchor)
+		leadingPlaceholderConstraint?.isActive = true
+
+		trailingPlaceholderConstraint = placeholderLabel.trailingAnchor.constraint(equalTo: trailingAnchor)
+		trailingPlaceholderConstraint?.isActive = true
 
 		addLayoutGuide(placeholderLayoutGuide)
 
@@ -261,6 +272,17 @@ open class TweePlaceholderTextField: UITextField {
 		let centerYConstraint = placeholderLabel.centerYAnchor.constraint(equalTo: centerYAnchor)
 		centerYConstraint.priority = .defaultHigh
 		centerYConstraint.isActive = true
+
+		configurePlaceholderInsets()
+	}
+
+	private func configurePlaceholderInsets() {
+		let placeholderRect = self.placeholderRect(forBounds: bounds)
+
+		leadingPlaceholderConstraint?.constant = placeholderRect.origin.x + placeholderInsets.left
+
+		let trailing = bounds.width - placeholderRect.maxX
+		trailingPlaceholderConstraint?.constant = -trailing - placeholderInsets.right
 	}
 
 	private func enablePlaceholderHeightConstraint() {

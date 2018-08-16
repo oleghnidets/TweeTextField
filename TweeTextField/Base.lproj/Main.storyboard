@@ -153,14 +153,41 @@
                                     <constraint firstItem="Ib7-Qf-pz7" firstAttribute="height" secondItem="SwP-Fd-Fft" secondAttribute="height" id="fMy-5c-WpL"/>
                                 </constraints>
                             </stackView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GSD-GC-nGa" customClass="PasswordTextField" customModule="TweeTextField">
+                                <rect key="frame" x="32" y="288" width="312" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="hX8-3C-iGN"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="tweePlaceholder" value="Password"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" red="0.0039215686269999999" green="0.63137254899999995" blue="0.3803921569" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="placeholderDuration">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="minimumPlaceholderFontSize">
+                                        <real key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="originalPlaceholderFontSize">
+                                        <real key="value" value="17"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="GSD-GC-nGa" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="0pO-mT-DDF"/>
                             <constraint firstItem="Wz3-0y-Vnd" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.9" id="DEP-8P-yxv"/>
                             <constraint firstItem="Wz3-0y-Vnd" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="KQH-V3-b5K"/>
                             <constraint firstItem="BwO-Q2-dKq" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="SrW-DF-eDg"/>
                             <constraint firstItem="BwO-Q2-dKq" firstAttribute="top" secondItem="Wz3-0y-Vnd" secondAttribute="bottom" constant="37" id="aa8-zk-OuM"/>
                             <constraint firstItem="Wz3-0y-Vnd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="mAe-Bq-7kh"/>
+                            <constraint firstItem="GSD-GC-nGa" firstAttribute="top" secondItem="BwO-Q2-dKq" secondAttribute="bottom" constant="6" id="mqm-Cr-3Yq"/>
+                            <constraint firstItem="GSD-GC-nGa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="qkH-mq-Lqy"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -172,6 +199,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="117.39130434782609"/>
         </scene>
     </scenes>
 </document>
