@@ -4,7 +4,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'TweeTextField'
-  s.version          = '1.3.0'
+  s.version          = '1.3.1'
   s.summary          = 'Lightweight set of attributed text fields with nice animation'
   s.description      = <<-DESC
 This is lightweight library that provides different types of Text Fields based on your needs. I was inspired by https://uimovement.com/ui/2524/input-field-help/.
