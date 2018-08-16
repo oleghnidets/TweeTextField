@@ -179,7 +179,7 @@ open class TweePlaceholderTextField: UITextField {
 	@objc private func minimizePlaceholder() {
 		enablePlaceholderHeightConstraint()
 
-		UIView.animate(withDuration: placeholderDuration, delay: 0, options: [.preferredFramesPerSecond30], animations: {
+        UIView.animate(withDuration: isEditing ? placeholderDuration : 0, delay: 0, options: [.preferredFramesPerSecond30], animations: {
 			self.layoutIfNeeded()
 
 			switch self.minimizationAnimationType {
