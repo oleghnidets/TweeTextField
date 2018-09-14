@@ -95,7 +95,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ipt-cn-CA9" customClass="TweeAttributedTextField" customModule="TweeTextField_Sample" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ipt-cn-CA9" customClass="AnimatedTextField" customModule="TweeTextField">
                                         <rect key="frame" x="0.0" y="120" width="337.5" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="ZjG-ZS-5Tb"/>
