@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BwO-Q2-dKq">
-                                <rect key="frame" x="147" y="249" width="80" height="33"/>
+                                <rect key="frame" x="147" y="319" width="80" height="33"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <state key="normal" title="CONFIRM">
                                     <color key="titleColor" red="0.29019609089999998" green="0.5647059083" blue="0.88627451660000001" alpha="1" colorSpace="deviceRGB"/>
@@ -30,7 +30,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Wz3-0y-Vnd">
-                                <rect key="frame" x="19" y="52" width="337.5" height="160"/>
+                                <rect key="frame" x="19" y="52" width="337.5" height="230"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="James Bond" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ib7-Qf-pz7" customClass="TweeBorderedTextField" customModule="TweeTextField_Sample" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="337.5" height="40"/>
@@ -147,53 +147,63 @@
                                             <action selector="emailEndEditing:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="PUh-nQ-uM3"/>
                                         </connections>
                                     </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GSD-GC-nGa" customClass="PasswordTextField" customModule="TweeTextField">
+                                        <rect key="frame" x="0.0" y="180" width="337.5" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="hX8-3C-iGN"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="tweePlaceholder" value="Password"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                <color key="value" red="0.0039215686269999999" green="0.63137254899999995" blue="0.3803921569" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="placeholderDuration">
+                                                <real key="value" value="0.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="minimumPlaceholderFontSize">
+                                                <real key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="originalPlaceholderFontSize">
+                                                <real key="value" value="17"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="SwP-Fd-Fft" firstAttribute="height" secondItem="ipt-cn-CA9" secondAttribute="height" id="YoF-I6-WIk"/>
                                     <constraint firstItem="Ib7-Qf-pz7" firstAttribute="height" secondItem="SwP-Fd-Fft" secondAttribute="height" id="fMy-5c-WpL"/>
                                 </constraints>
                             </stackView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GSD-GC-nGa" customClass="PasswordTextField" customModule="TweeTextField">
-                                <rect key="frame" x="32" y="288" width="312" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="hX8-3C-iGN"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="tweePlaceholder" value="Password"/>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                        <color key="value" red="0.0039215686269999999" green="0.63137254899999995" blue="0.3803921569" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="placeholderDuration">
-                                        <real key="value" value="0.5"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="minimumPlaceholderFontSize">
-                                        <real key="value" value="12"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="originalPlaceholderFontSize">
-                                        <real key="value" value="17"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H4d-jf-O4s">
+                                <rect key="frame" x="109.5" y="360" width="156" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="REMOVE FIRST FIELD">
+                                    <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="removeFirstField" destination="BYZ-38-t0r" eventType="touchUpInside" id="diE-xv-ZVH"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="GSD-GC-nGa" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="0pO-mT-DDF"/>
                             <constraint firstItem="Wz3-0y-Vnd" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.9" id="DEP-8P-yxv"/>
+                            <constraint firstItem="H4d-jf-O4s" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="IqP-Pb-iIT"/>
                             <constraint firstItem="Wz3-0y-Vnd" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="KQH-V3-b5K"/>
+                            <constraint firstItem="H4d-jf-O4s" firstAttribute="top" secondItem="BwO-Q2-dKq" secondAttribute="bottom" constant="8" id="R8c-TI-mLY"/>
                             <constraint firstItem="BwO-Q2-dKq" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="SrW-DF-eDg"/>
                             <constraint firstItem="BwO-Q2-dKq" firstAttribute="top" secondItem="Wz3-0y-Vnd" secondAttribute="bottom" constant="37" id="aa8-zk-OuM"/>
                             <constraint firstItem="Wz3-0y-Vnd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="mAe-Bq-7kh"/>
-                            <constraint firstItem="GSD-GC-nGa" firstAttribute="top" secondItem="BwO-Q2-dKq" secondAttribute="bottom" constant="6" id="mqm-Cr-3Yq"/>
-                            <constraint firstItem="GSD-GC-nGa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="qkH-mq-Lqy"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="emailTextField" destination="ipt-cn-CA9" id="ZEk-ud-teh"/>
                         <outlet property="passwordTextField" destination="SwP-Fd-Fft" id="4b6-Xb-44G"/>
+                        <outlet property="stackView" destination="Wz3-0y-Vnd" id="vI5-yV-I8e"/>
                         <outlet property="usernameTextField" destination="Ib7-Qf-pz7" id="TKO-SU-ATJ"/>
                     </connections>
                 </viewController>

@@ -13,20 +13,22 @@ extension String {
 }
 
 final class ViewController: UIViewController {
-
+	@IBOutlet private weak var stackView: UIStackView!
 	@IBOutlet private weak var usernameTextField: TweeBorderedTextField!
-
 	@IBOutlet private weak var passwordTextField: TweeActiveTextField!
-
 	@IBOutlet private weak var emailTextField: TweeAttributedTextField!
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-//		usernameTextField.text = "text"
-//		usernameTextField.tweePlaceholder = "User name"
 
 		passwordTextField.text = "password"
 		emailTextField.text = "text"
+	}
+
+	@IBAction private func removeFirstField() {
+		stackView.arrangedSubviews.first.flatMap {
+			$0.removeFromSuperview()
+		}
 	}
 
 	@IBAction private func confirm() {

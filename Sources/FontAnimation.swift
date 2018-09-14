@@ -7,15 +7,12 @@ import QuartzCore
 import CoreFoundation
 
 internal final class FontAnimation {
-
-	private let displayLink: CADisplayLink?
+	private var displayLink: CADisplayLink?
 	private(set) var startTime: CFTimeInterval?
 
-	private let target: Any
 	private let selector: Selector
 
-	init(target: Any, selector: Selector) {
-		self.target = target
+	init(target: AnyObject, selector: Selector) {
 		self.selector = selector
 
 		displayLink = CADisplayLink(target: target, selector: selector)
@@ -27,12 +24,14 @@ internal final class FontAnimation {
 	}
 
 	func start() {
-		startTime = CFAbsoluteTimeGetCurrent()
 		displayLink?.isPaused = false
+
+		startTime = CFAbsoluteTimeGetCurrent()
 	}
 
 	func stop() {
 		startTime = nil
+
 		displayLink?.isPaused = true
 	}
 }

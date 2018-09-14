@@ -15,6 +15,8 @@
 		7C065D3920E3F02C00B8F983 /* TweeAttributedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A146091FEC228900CEADAA /* TweeAttributedTextField.swift */; };
 		7C065D3A20E3F02C00B8F983 /* TweeActiveTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A1460A1FEC228900CEADAA /* TweeActiveTextField.swift */; };
 		7C065D3B20E3F02C00B8F983 /* FontAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A1460B1FEC228900CEADAA /* FontAnimation.swift */; };
+		7C15066C214BF43D006A7D4C /* WeakTargetProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C15066B214BF43D006A7D4C /* WeakTargetProxy.swift */; };
+		7C15066D214BF47E006A7D4C /* WeakTargetProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C15066B214BF43D006A7D4C /* WeakTargetProxy.swift */; };
 		7CF5909A2125DB5D0015777F /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF590992125DB5D0015777F /* PasswordTextField.swift */; };
 		92A1460C1FEC228900CEADAA /* TweePlaceholderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A146071FEC228900CEADAA /* TweePlaceholderTextField.swift */; };
 		92A1460D1FEC228900CEADAA /* TweeBorderedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A146081FEC228900CEADAA /* TweeBorderedTextField.swift */; };
@@ -56,6 +58,7 @@
 		7C065D2B20E3EFCD00B8F983 /* TweeTextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TweeTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C065D2D20E3EFCD00B8F983 /* TweeTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TweeTextField.h; sourceTree = "<group>"; };
 		7C065D2E20E3EFCD00B8F983 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7C15066B214BF43D006A7D4C /* WeakTargetProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakTargetProxy.swift; sourceTree = "<group>"; };
 		7CF590992125DB5D0015777F /* PasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
 		92A146071FEC228900CEADAA /* TweePlaceholderTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweePlaceholderTextField.swift; sourceTree = "<group>"; };
 		92A146081FEC228900CEADAA /* TweeBorderedTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweeBorderedTextField.swift; sourceTree = "<group>"; };
@@ -119,6 +122,7 @@
 				92A146091FEC228900CEADAA /* TweeAttributedTextField.swift */,
 				92A1460A1FEC228900CEADAA /* TweeActiveTextField.swift */,
 				92A1460B1FEC228900CEADAA /* FontAnimation.swift */,
+				7C15066B214BF43D006A7D4C /* WeakTargetProxy.swift */,
 			);
 			path = Sources;
 			sourceTree = SOURCE_ROOT;
@@ -303,6 +307,7 @@
 				7C065D3920E3F02C00B8F983 /* TweeAttributedTextField.swift in Sources */,
 				7C065D3A20E3F02C00B8F983 /* TweeActiveTextField.swift in Sources */,
 				7C065D3B20E3F02C00B8F983 /* FontAnimation.swift in Sources */,
+				7C15066C214BF43D006A7D4C /* WeakTargetProxy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,6 +316,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				92A146101FEC228900CEADAA /* FontAnimation.swift in Sources */,
+				7C15066D214BF47E006A7D4C /* WeakTargetProxy.swift in Sources */,
 				92A1460F1FEC228900CEADAA /* TweeActiveTextField.swift in Sources */,
 				92E7FC3C1FE0374600E58DF5 /* ViewController.swift in Sources */,
 				92E7FC3A1FE0374600E58DF5 /* AppDelegate.swift in Sources */,

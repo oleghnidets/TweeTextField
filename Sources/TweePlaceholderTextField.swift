@@ -85,8 +85,8 @@ open class TweePlaceholderTextField: UITextField {
 		}
 	}
 
-	private lazy var minimizeFontAnimation = FontAnimation(target: self, selector: #selector(minimizePlaceholderFontSize))
-	private lazy var maximizeFontAnimation = FontAnimation(target: self, selector: #selector(maximizePlaceholderFontSize))
+	private lazy var minimizeFontAnimation = FontAnimation(target: WeakTargetProxy(target: self), selector: #selector(minimizePlaceholderFontSize))
+	private lazy var maximizeFontAnimation = FontAnimation(target: WeakTargetProxy(target: self), selector: #selector(maximizePlaceholderFontSize))
 
 	private let placeholderLayoutGuide = UILayoutGuide()
 	private var leadingPlaceholderConstraint: NSLayoutConstraint?
