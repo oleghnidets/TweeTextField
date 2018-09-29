@@ -157,12 +157,12 @@ open class TweePlaceholderTextField: UITextField {
 
 		notificationCenter.addObserver(self,
 									   selector: #selector(minimizePlaceholder),
-									   name: .UITextFieldTextDidBeginEditing,
+									   name: UITextField.textDidBeginEditingNotification,
 									   object: self)
 
 		notificationCenter.addObserver(self,
 									   selector: #selector(maximizePlaceholder),
-									   name: .UITextFieldTextDidEndEditing,
+									   name: UITextField.textDidEndEditingNotification,
 									   object: self)
 	}
 
