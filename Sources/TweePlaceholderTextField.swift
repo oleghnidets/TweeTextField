@@ -286,7 +286,7 @@ open class TweePlaceholderTextField: UITextField {
 	}
 
 	private func enablePlaceholderHeightConstraint() {
-//        guard placeholderLayoutGuide.owningView != nil else { return }
+        guard placeholderLayoutGuide.owningView != nil else { return }
 		placeholderGuideHeightConstraint?.isActive = false
 		placeholderGuideHeightConstraint = placeholderLayoutGuide.heightAnchor.constraint(equalTo: heightAnchor)
 		placeholderGuideHeightConstraint?.isActive = true
