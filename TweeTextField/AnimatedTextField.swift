@@ -11,14 +11,14 @@ class AnimatedTextField: TweeAttributedTextField {
 		NotificationCenter.default.addObserver(
 			self,
 			selector: #selector(startEditing),
-			name: .UITextFieldTextDidBeginEditing,
+			name: UITextField.textDidBeginEditingNotification,
 			object: self
 		)
 
 		NotificationCenter.default.addObserver(
 			self,
 			selector: #selector(endEditingText),
-			name: .UITextFieldTextDidEndEditing,
+			name: UITextField.textDidEndEditingNotification,
 			object: self
 		)
 	}

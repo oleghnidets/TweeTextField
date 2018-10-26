@@ -74,12 +74,12 @@ open class TweeActiveTextField: TweeBorderedTextField {
 
 		notificationCenter.addObserver(self,
 									   selector: #selector(textFieldDidBeginEditing),
-									   name: .UITextFieldTextDidBeginEditing,
+									   name: UITextField.textDidBeginEditingNotification,
 									   object: self)
 
 		notificationCenter.addObserver(self,
 									   selector: #selector(textFieldDidEndEditing),
-									   name: .UITextFieldTextDidEndEditing,
+									   name: UITextField.textDidEndEditingNotification,
 									   object: self)
 	}
 
@@ -105,6 +105,6 @@ private extension CABasicAnimation {
 		self.duration = duration
 
 		isRemovedOnCompletion = false
-		fillMode = kCAFillModeForwards
+		fillMode = CAMediaTimingFillMode.forwards
 	}
 }

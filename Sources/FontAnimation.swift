@@ -16,7 +16,7 @@ internal final class FontAnimation {
 		self.selector = selector
 
 		displayLink = CADisplayLink(target: target, selector: selector)
-		displayLink?.add(to: .main, forMode: .commonModes)
+		displayLink?.add(to: .main, forMode: RunLoop.Mode.common)
 
 		if #available(iOS 10.0, *) {
 			displayLink?.preferredFramesPerSecond = 30
