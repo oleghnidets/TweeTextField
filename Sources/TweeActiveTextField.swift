@@ -37,18 +37,21 @@ open class TweeActiveTextField: TweeBorderedTextField {
 
 	// MARK: Methods
 
+    /// :nodoc:
 	public override init(frame: CGRect) {
 		super.init(frame: frame)
 
 		initializeSetup()
 	}
 
+    /// :nodoc:
 	public required init?(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder)
 
 		initializeSetup()
 	}
 
+    /// :nodoc:
 	open override func layoutSubviews() {
 		super.layoutSubviews()
 

@@ -52,6 +52,7 @@ open class TweePlaceholderTextField: UITextField {
 		}
 	}
 
+    /// The custom insets for `placeholderLabel` relative to the text field.
 	public var placeholderInsets: UIEdgeInsets = .zero
 
 	/// Custom placeholder label. You can use it to style placeholder text.
@@ -96,18 +97,21 @@ open class TweePlaceholderTextField: UITextField {
 
 	// MARK: Methods
 
+    /// :nodoc:
 	public override init(frame: CGRect) {
 		super.init(frame: frame)
 
 		initializeSetup()
 	}
 
+    /// :nodoc:
 	public required init?(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder)
 
 		initializeSetup()
 	}
 
+    /// :nodoc:
 	open override func awakeFromNib() {
 		super.awakeFromNib()
 
@@ -115,6 +119,7 @@ open class TweePlaceholderTextField: UITextField {
 		setPlaceholderSizeImmediately()
 	}
 
+    /// :nodoc:
 	open override func layoutSubviews() {
 		super.layoutSubviews()
 
@@ -267,11 +272,13 @@ open class TweePlaceholderTextField: UITextField {
 
 		disablePlaceholderHeightConstraint()
 
-		placeholderLabel.bottomAnchor.constraint(equalTo: placeholderLayoutGuide.topAnchor).isActive = true
-
 		let centerYConstraint = placeholderLabel.centerYAnchor.constraint(equalTo: centerYAnchor)
 		centerYConstraint.priority = .defaultHigh
-		centerYConstraint.isActive = true
+
+        NSLayoutConstraint.activate([
+            placeholderLabel.bottomAnchor.constraint(equalTo: placeholderLayoutGuide.topAnchor),
+            centerYConstraint
+            ])
 
 		configurePlaceholderInsets()
 	}
@@ -286,14 +293,20 @@ open class TweePlaceholderTextField: UITextField {
 	}
 
 	private func enablePlaceholderHeightConstraint() {
-//        guard placeholderLayoutGuide.owningView != nil else { return }
+        guard placeholderLayoutGuide.owningView != nil else {
+            return
+        }
+
 		placeholderGuideHeightConstraint?.isActive = false
 		placeholderGuideHeightConstraint = placeholderLayoutGuide.heightAnchor.constraint(equalTo: heightAnchor)
 		placeholderGuideHeightConstraint?.isActive = true
 	}
 
 	private func disablePlaceholderHeightConstraint() {
-        guard placeholderLayoutGuide.owningView != nil else { return }
+        guard placeholderLayoutGuide.owningView != nil else {
+            return
+        }
+
 		placeholderGuideHeightConstraint?.isActive = false
 		placeholderGuideHeightConstraint = placeholderLayoutGuide.heightAnchor.constraint(equalToConstant: 0)
 		placeholderGuideHeightConstraint?.isActive = true

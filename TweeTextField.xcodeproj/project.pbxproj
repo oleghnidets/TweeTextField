@@ -537,7 +537,7 @@
 				DEVELOPMENT_TEAM = 4LZBFVML4B;
 				INFOPLIST_FILE = "$(SRCROOT)/TweeTextField/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.com.tweetextfield1-sample";
+				PRODUCT_BUNDLE_IDENTIFIER = com.oleg.ParkingScanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
@@ -555,7 +555,7 @@
 				DEVELOPMENT_TEAM = 4LZBFVML4B;
 				INFOPLIST_FILE = "$(SRCROOT)/TweeTextField/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.com.tweetextfield1-sample";
+				PRODUCT_BUNDLE_IDENTIFIER = com.oleg.ParkingScanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;

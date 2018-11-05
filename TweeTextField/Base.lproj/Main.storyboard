@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BwO-Q2-dKq">
-                                <rect key="frame" x="147" y="319" width="80" height="33"/>
+                                <rect key="frame" x="147.5" y="319" width="80" height="33"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <state key="normal" title="CONFIRM">
                                     <color key="titleColor" red="0.29019609089999998" green="0.5647059083" blue="0.88627451660000001" alpha="1" colorSpace="deviceRGB"/>
@@ -178,13 +177,23 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H4d-jf-O4s">
-                                <rect key="frame" x="109.5" y="360" width="156" height="30"/>
+                                <rect key="frame" x="109" y="360" width="157" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="REMOVE FIRST FIELD">
                                     <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="removeFirstField" destination="BYZ-38-t0r" eventType="touchUpInside" id="diE-xv-ZVH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="edm-eE-aR2">
+                                <rect key="frame" x="128" y="398" width="119" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="GENERATE NEW">
+                                    <color key="titleColor" red="0.29027547648214569" green="0.60931726718813639" blue="0.2638313663245116" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="generateNewTextField" destination="BYZ-38-t0r" eventType="touchUpInside" id="sdR-xm-hL6"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -197,6 +206,8 @@
                             <constraint firstItem="BwO-Q2-dKq" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="SrW-DF-eDg"/>
                             <constraint firstItem="BwO-Q2-dKq" firstAttribute="top" secondItem="Wz3-0y-Vnd" secondAttribute="bottom" constant="37" id="aa8-zk-OuM"/>
                             <constraint firstItem="Wz3-0y-Vnd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="mAe-Bq-7kh"/>
+                            <constraint firstItem="edm-eE-aR2" firstAttribute="top" secondItem="H4d-jf-O4s" secondAttribute="bottom" constant="8" id="pOj-Pf-G1o"/>
+                            <constraint firstItem="edm-eE-aR2" firstAttribute="centerX" secondItem="H4d-jf-O4s" secondAttribute="centerX" id="vej-UN-xeQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

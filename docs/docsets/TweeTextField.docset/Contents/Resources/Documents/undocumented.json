@@ -1,82 +1,12 @@
 {
   "warnings": [
     {
-      "file": "/Users/oleg/Desktop/start/my-projects/TweeTextField/Sources/TweeActiveTextField.swift",
-      "line": 40,
-      "symbol": "TweeActiveTextField.init(frame:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/oleg/Desktop/start/my-projects/TweeTextField/Sources/TweeActiveTextField.swift",
-      "line": 46,
-      "symbol": "TweeActiveTextField.init(coder:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/oleg/Desktop/start/my-projects/TweeTextField/Sources/TweeActiveTextField.swift",
-      "line": 52,
-      "symbol": "TweeActiveTextField.layoutSubviews()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/oleg/Desktop/start/my-projects/TweeTextField/Sources/TweeAttributedTextField.swift",
-      "line": 37,
-      "symbol": "TweeAttributedTextField.init(frame:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/oleg/Desktop/start/my-projects/TweeTextField/Sources/TweeAttributedTextField.swift",
-      "line": 43,
-      "symbol": "TweeAttributedTextField.init(coder:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/oleg/Desktop/start/my-projects/TweeTextField/Sources/TweeBorderedTextField.swift",
-      "line": 42,
-      "symbol": "TweeBorderedTextField.init(frame:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/oleg/Desktop/start/my-projects/TweeTextField/Sources/TweeBorderedTextField.swift",
-      "line": 48,
-      "symbol": "TweeBorderedTextField.init(coder:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/oleg/Desktop/start/my-projects/TweeTextField/Sources/TweeBorderedTextField.swift",
-      "line": 54,
-      "symbol": "TweeBorderedTextField.layoutSubviews()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/oleg/Desktop/start/my-projects/TweeTextField/Sources/TweePlaceholderTextField.swift",
-      "line": 94,
-      "symbol": "TweePlaceholderTextField.init(frame:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/oleg/Desktop/start/my-projects/TweeTextField/Sources/TweePlaceholderTextField.swift",
-      "line": 100,
-      "symbol": "TweePlaceholderTextField.init(coder:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/oleg/Desktop/start/my-projects/TweeTextField/Sources/TweePlaceholderTextField.swift",
-      "line": 106,
-      "symbol": "TweePlaceholderTextField.awakeFromNib()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "file": "/Users/ognidets/Desktop/TweeTextField/Sources/TweePlaceholderTextField.swift",
+      "line": 55,
+      "symbol": "TweePlaceholderTextField.placeholderInsets",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     }
   ],
-  "source_directory": "/Users/oleg/Desktop/start/my-projects/TweeTextField"
+  "source_directory": "/Users/ognidets/Desktop/TweeTextField"
 }

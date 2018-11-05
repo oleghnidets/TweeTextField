@@ -21,6 +21,8 @@ final class ViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
+        passwordTextField.delegate = self
+
 		passwordTextField.text = "password"
 		emailTextField.text = "text"
 	}
@@ -35,6 +37,17 @@ final class ViewController: UIViewController {
 		emailTextField.text = "Issue #8"
 	}
 
+    @IBAction private func generateNewTextField() {
+        let newField = TweeAttributedTextField()
+        stackView.addArrangedSubview(newField)
+
+        newField.heightAnchor.constraint(equalToConstant: emailTextField.frame.height).isActive = true
+
+        newField.borderStyle = .roundedRect
+        newField.text = "Newly generated"
+        newField.tweePlaceholder = "\(Date().description)"
+    }
+
 	@IBAction private func emailBeginEditing(_ sender: TweeAttributedTextField) {
 		emailTextField.hideInfo()
 	}
@@ -46,4 +59,10 @@ final class ViewController: UIViewController {
 
 		sender.showInfo("Email address is incorrect. Check it out")
 	}
+}
+
+extension ViewController: UITextFieldDelegate {
+    func textFieldShouldClear(_ textField: UITextField) -> Bool {
+        return false
+    }
 }
