@@ -1,5 +1,5 @@
 //  Created by Oleg Hnidets on 12/20/17.
-//  Copyright © 2017-2018 Oleg Hnidets. All rights reserved.
+//  Copyright © 2017-2019 Oleg Hnidets. All rights reserved.
 //
 
 import UIKit
@@ -11,8 +11,8 @@ internal class Line {
 }
 
 public struct BorderOffset {
-	let x: CGFloat
-	let y: CGFloat
+	let x: CGFloat // swiftlint:disable:this identifier_name
+	let y: CGFloat // swiftlint:disable:this identifier_name
 }
 
 /// An object of the class can show bottom line permanently.

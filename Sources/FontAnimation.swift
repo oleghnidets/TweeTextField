@@ -1,5 +1,5 @@
 //  Created by Oleg Hnidets on 12/20/17.
-//  Copyright © 2017-2018 Oleg Hnidets. All rights reserved.
+//  Copyright © 2017-2019 Oleg Hnidets. All rights reserved.
 //
 
 import Foundation
@@ -16,7 +16,7 @@ internal final class FontAnimation {
 		self.selector = selector
 
 		displayLink = CADisplayLink(target: target, selector: selector)
-		displayLink?.add(to: .main, forMode: RunLoop.Mode.common)
+		displayLink?.add(to: .main, forMode: .common)
 
 		if #available(iOS 10.0, *) {
 			displayLink?.preferredFramesPerSecond = 30

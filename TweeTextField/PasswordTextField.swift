@@ -1,5 +1,5 @@
-//  Created by Oleg H. on 8/16/18.
-//  Copyright © 2018 Oleg Gnidets. All rights reserved.
+//  Created by Oleg Hnidets on 8/16/18.
+//  Copyright © 2018-2019 Oleg Hnidets. All rights reserved.
 //
 
 import UIKit

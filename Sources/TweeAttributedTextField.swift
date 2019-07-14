@@ -1,5 +1,5 @@
 //  Created by Oleg Hnidets on 12/12/17.
-//  Copyright © 2017-2018 Oleg Hnidets. All rights reserved.
+//  Copyright © 2017-2019 Oleg Hnidets. All rights reserved.
 //
 
 import UIKit
@@ -55,14 +55,15 @@ open class TweeAttributedTextField: TweeActiveTextField {
 	///   - text: Custom attributed text to show.
 	///   - animated: By default is `true`.
 	public func showInfo(_ attrText: NSAttributedString, animated: Bool = true) {
-		if animated {
-			UIView.transition(with: infoLabel, duration: infoAnimationDuration, options: [.transitionCrossDissolve], animations: {
-				self.infoLabel.alpha = 1
-				self.infoLabel.attributedText = attrText
-			})
-		} else {
+		guard animated else {
 			infoLabel.attributedText = attrText
+			return
 		}
+
+		UIView.transition(with: infoLabel, duration: infoAnimationDuration, options: [.transitionCrossDissolve], animations: {
+			self.infoLabel.alpha = 1
+			self.infoLabel.attributedText = attrText
+		})
 	}
 
 	/// Shows info label with/without animation.
@@ -70,25 +71,27 @@ open class TweeAttributedTextField: TweeActiveTextField {
 	///   - text: Custom text to show.
 	///   - animated: By default is `true`.
 	public func showInfo(_ text: String, animated: Bool = true) {
-		if animated {
-			UIView.transition(with: infoLabel, duration: infoAnimationDuration, options: [.transitionCrossDissolve], animations: {
-				self.infoLabel.alpha = 1
-				self.infoLabel.text = text
-			})
-		} else {
+		guard animated else {
 			infoLabel.text = text
+			return
 		}
+
+		UIView.transition(with: infoLabel, duration: infoAnimationDuration, options: [.transitionCrossDissolve], animations: {
+			self.infoLabel.alpha = 1
+			self.infoLabel.text = text
+		})
 	}
 
 	/// Hides the info label with animation or not.
 	/// - Parameter animated: By default is `true`.
 	public func hideInfo(animated: Bool = true) {
-		if animated {
-			UIView.animate(withDuration: infoAnimationDuration) {
-				self.infoLabel.alpha = 0
-			}
-		} else {
+		guard animated else {
 			infoLabel.alpha = 0
+			return
+		}
+
+		UIView.animate(withDuration: infoAnimationDuration) {
+			self.infoLabel.alpha = 0
 		}
 	}
 
@@ -100,8 +103,10 @@ open class TweeAttributedTextField: TweeActiveTextField {
 		addSubview(infoLabel)
 		infoLabel.translatesAutoresizingMaskIntoConstraints = false
 
-		infoLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0).isActive = true
-		infoLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0).isActive = true
-		infoLabel.topAnchor.constraint(equalTo: bottomAnchor, constant: 2).isActive = true
+		NSLayoutConstraint.activate([
+			infoLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0),
+			infoLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0),
+			infoLabel.topAnchor.constraint(equalTo: bottomAnchor, constant: 2)
+			])
 	}
 }
