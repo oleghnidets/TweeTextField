@@ -10,6 +10,7 @@ internal class Line {
 	var layer = CAShapeLayer()
 }
 
+/// Сustom offset of bottom line.
 public struct BorderOffset {
 	let x: CGFloat // swiftlint:disable:this identifier_name
 	let y: CGFloat // swiftlint:disable:this identifier_name
@@ -18,6 +19,7 @@ public struct BorderOffset {
 /// An object of the class can show bottom line permanently.
 open class TweeBorderedTextField: TweePlaceholderTextField {
 
+    /// Specifies offset for the bottom line based on default border coordinates.
 	public var borderOffset = BorderOffset(x: 0, y: 0)
 
 	/// Color of bottom line.
@@ -46,18 +48,21 @@ open class TweeBorderedTextField: TweePlaceholderTextField {
 
 	// MARK: Methods
 
+    /// :nodoc:
 	public override init(frame: CGRect) {
 		super.init(frame: frame)
 
 		initializeSetup()
 	}
 
+    /// :nodoc:
 	public required init?(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder)
 
 		initializeSetup()
 	}
 
+    /// :nodoc:
 	override open func layoutSubviews() {
 		super.layoutSubviews()
 

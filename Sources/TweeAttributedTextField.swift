@@ -34,12 +34,14 @@ open class TweeAttributedTextField: TweeActiveTextField {
 
 	// MARK: Methods
 
+    /// :nodoc:
 	public override init(frame: CGRect) {
 		super.init(frame: frame)
 
 		initializeSetup()
 	}
 
+    /// :nodoc:
 	public required init?(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder)
 

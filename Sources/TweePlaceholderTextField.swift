@@ -13,7 +13,7 @@ open class TweePlaceholderTextField: UITextField {
 		case immediately
 
 		// May have performance issue on first launch. Need to investigate how to fix.
-		/** Sets minimum font size step by step during animation transition when a user begins editing */
+		/** Sets minimum font size step by step during animation transition when a user begins editing. */
 		case smoothly
 	}
 

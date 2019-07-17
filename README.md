@@ -30,7 +30,7 @@ This is lightweight library that provides different types of Text Fields based o
 - [x] Customizable via Attributes Inspector
 - [x] Nice animation for placeholder
 - [x] Nice animation for bottom line
-- [x] No UITextField behaviours override
+- [x] No override of UITextField' behaviors
 - [x] Clean code with divided functionalities
 - [x] Easy to use and extend
 - [x] Right-to-Left support
@@ -38,11 +38,11 @@ This is lightweight library that provides different types of Text Fields based o
 
 ## Requirements
 
-- iOS 9.0+
-- Xcode 9.0+
-- Swift 4.0+
+- iOS 10.0+
+- Xcode 10.0+
+- Swift 5.0+
 
-## Installation
+## Installation 
 
 #### CocoaPods
 To integrate `TweeTextField` into your Xcode project using CocoaPods, specify it in your `Podfile`:
@@ -99,13 +99,12 @@ usernameTextField.lineWidth = 2
 - If you want to contribute, [submit a pull request](https://github.com/oleghnidets/TweeTextField/compare).
 - If you found a bug, have suggestions or need help, please, [open an issue](https://github.com/oleghnidets/TweeTextField/issues/new).
 - If you need help, write me oleg.oleksan@gmail.com.
-- If you want to [give me](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=CVFAEEZJ9DJ3L) some motivation ;] 
 
 ## License
 Distributed under the MIT license. See [LICENSE](https://github.com/oleghnidets/TweeTextField/blob/develop/LICENSE) for more information.
 
 
-[swift-image]: https://img.shields.io/badge/swift-4.0-orange.svg
+[swift-image]: https://img.shields.io/badge/swift-5.0-orange.svg
 [swift-url]: https://swift.org/
 [license-image]: https://img.shields.io/badge/License-MIT-blue.svg
 [license-url]: LICENSE
