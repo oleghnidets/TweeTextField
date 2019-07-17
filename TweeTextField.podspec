@@ -14,6 +14,7 @@ This is lightweight library that provides different types of Text Fields based o
   s.author           = { 'Oleg Hnidets' => 'oleg.oleksan@gmail.com' }
   s.source           = { :git => 'https://github.com/oleghnidets/TweeTextField.git', :tag => s.version.to_s }
   s.ios.deployment_target = '10.0'
+  s.swift_version    = '5.0'
   s.requires_arc     = true 
   s.source_files     = 'Sources/*.swift'
   s.frameworks       = 'UIKit'
