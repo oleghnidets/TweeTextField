@@ -7,6 +7,12 @@ import QuartzCore
 import CoreFoundation
 
 internal final class FontAnimation {
+
+	private enum Settings {
+
+		static let preferredFramesPerSecond = 30
+	}
+
 	private var displayLink: CADisplayLink?
 	private(set) var startTime: CFTimeInterval?
 
@@ -16,14 +22,11 @@ internal final class FontAnimation {
 		self.selector = selector
 
 		displayLink = CADisplayLink(target: target, selector: selector)
-		displayLink?.add(to: .main, forMode: .common)
-
-		if #available(iOS 10.0, *) {
-			displayLink?.preferredFramesPerSecond = 30
-		}
+		displayLink?.preferredFramesPerSecond = Settings.preferredFramesPerSecond
 	}
 
 	func start() {
+        displayLink?.add(to: .main, forMode: .common)
 		displayLink?.isPaused = false
 
 		startTime = CFAbsoluteTimeGetCurrent()

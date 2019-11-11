@@ -18,7 +18,7 @@ open class TweePlaceholderTextField: UITextField {
 	}
 
 	/// Default is `immediately`.
-	public var minimizationAnimationType: MinimizationAnimationType = .immediately
+	public var minimizationAnimationType: MinimizationAnimationType = .smoothly
 
 	/// Minimum font size for the custom placeholder.
 	@IBInspectable public var minimumPlaceholderFontSize: CGFloat = 12
@@ -29,7 +29,7 @@ open class TweePlaceholderTextField: UITextField {
 	/// Color of custom placeholder.
 	@IBInspectable public var placeholderColor: UIColor? {
 		get {
-			return placeholderLabel.textColor
+			placeholderLabel.textColor
 		} set {
 			placeholderLabel.textColor = newValue
 		}
@@ -37,7 +37,7 @@ open class TweePlaceholderTextField: UITextField {
 	/// The styled string for a custom placeholder.
 	public var attributedTweePlaceholder: NSAttributedString? {
 		get {
-			return placeholderLabel.attributedText
+			placeholderLabel.attributedText
 		} set {
 			setAttributedPlaceholderText(newValue)
 		}
@@ -46,13 +46,13 @@ open class TweePlaceholderTextField: UITextField {
 	/// The string that is displayed when there is no other text in the text field.
 	@IBInspectable public var tweePlaceholder: String? {
 		get {
-			return placeholderLabel.text
+			placeholderLabel.text
 		} set {
 			setPlaceholderText(newValue)
 		}
 	}
 
-    /// The custom insets for `placeholderLabel` relative to the text field.
+	/// The custom insets for `placeholderLabel` relative to the text field.
 	public var placeholderInsets: UIEdgeInsets = .zero
 
 	/// Custom placeholder label. You can use it to style placeholder text.
@@ -86,32 +86,40 @@ open class TweePlaceholderTextField: UITextField {
 		}
 	}
 
-	private lazy var minimizeFontAnimation = FontAnimation(target: WeakTargetProxy(target: self), selector: #selector(minimizePlaceholderFontSize))
-	private lazy var maximizeFontAnimation = FontAnimation(target: WeakTargetProxy(target: self), selector: #selector(maximizePlaceholderFontSize))
+	private lazy var minimizeFontAnimation = FontAnimation(
+		target: WeakTargetProxy(target: self),
+		selector: #selector(minimizePlaceholderFontSize)
+	)
+
+	private lazy var maximizeFontAnimation = FontAnimation(
+		target: WeakTargetProxy(target: self),
+		selector: #selector(maximizePlaceholderFontSize)
+	)
+
+	// Constraint properties
 
 	private let placeholderLayoutGuide = UILayoutGuide()
 	private var leadingPlaceholderConstraint: NSLayoutConstraint?
 	private var trailingPlaceholderConstraint: NSLayoutConstraint?
-
 	private var placeholderGuideHeightConstraint: NSLayoutConstraint?
 
 	// MARK: Methods
 
-    /// :nodoc:
+	/// :nodoc:
 	public override init(frame: CGRect) {
 		super.init(frame: frame)
 
 		initializeSetup()
 	}
 
-    /// :nodoc:
+	/// :nodoc:
 	public required init?(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder)
 
 		initializeSetup()
 	}
 
-    /// :nodoc:
+	/// :nodoc:
 	open override func awakeFromNib() {
 		super.awakeFromNib()
 
@@ -119,7 +127,7 @@ open class TweePlaceholderTextField: UITextField {
 		setPlaceholderSizeImmediately()
 	}
 
-    /// :nodoc:
+	/// :nodoc:
 	open override func layoutSubviews() {
 		super.layoutSubviews()
 
@@ -160,15 +168,19 @@ open class TweePlaceholderTextField: UITextField {
 	private func observe() {
 		let notificationCenter = NotificationCenter.default
 
-		notificationCenter.addObserver(self,
-									   selector: #selector(minimizePlaceholder),
-									   name: UITextField.textDidBeginEditingNotification,
-									   object: self)
+		notificationCenter.addObserver(
+			self,
+			selector: #selector(minimizePlaceholder),
+			name: UITextField.textDidBeginEditingNotification,
+			object: self
+		)
 
-		notificationCenter.addObserver(self,
-									   selector: #selector(maximizePlaceholder),
-									   name: UITextField.textDidEndEditingNotification,
-									   object: self)
+		notificationCenter.addObserver(
+			self,
+			selector: #selector(maximizePlaceholder),
+			name: UITextField.textDidEndEditingNotification,
+			object: self
+		)
 	}
 
 	private func setPlaceholderSizeImmediately() {
@@ -182,19 +194,28 @@ open class TweePlaceholderTextField: UITextField {
 	}
 
 	@objc private func minimizePlaceholder() {
+		if let text = text, text.isEmpty == false {
+			return
+		}
+
 		enablePlaceholderHeightConstraint()
 
-        UIView.animate(withDuration: isEditing ? placeholderDuration : 0, delay: 0, options: [.preferredFramesPerSecond30], animations: {
-			self.layoutIfNeeded()
+		UIView.animate(
+			withDuration: isEditing ? placeholderDuration : .zero,
+			delay: .zero,
+			options: [.preferredFramesPerSecond30],
+			animations: {
+				self.layoutIfNeeded()
 
-			switch self.minimizationAnimationType {
-			case .immediately:
-				self.placeholderLabel.font = self.placeholderLabel.font.withSize(self.minimumPlaceholderFontSize)
-			case .smoothly:
-				self.minimizeFontAnimation.start()
-			}
-		}, completion: { _ in
-			self.minimizeFontAnimation.stop()
+				switch self.minimizationAnimationType {
+				case .immediately:
+					self.placeholderLabel.font = self.placeholderLabel.font.withSize(self.minimumPlaceholderFontSize)
+				case .smoothly:
+					self.minimizeFontAnimation.start()
+				}
+		},
+			completion: { _ in
+				self.minimizeFontAnimation.stop()
 		})
 	}
 
@@ -206,7 +227,7 @@ open class TweePlaceholderTextField: UITextField {
 		let timeDiff = CFAbsoluteTimeGetCurrent() - startTime
 		let percent = CGFloat(1 - timeDiff / placeholderDuration)
 
-		if percent < 0 {
+		if percent.isLess(than: .zero) {
 			return
 		}
 
@@ -224,9 +245,13 @@ open class TweePlaceholderTextField: UITextField {
 
 		disablePlaceholderHeightConstraint()
 
-		UIView.animate(withDuration: placeholderDuration, delay: 0, options: [.preferredFramesPerSecond60], animations: {
-			self.layoutIfNeeded()
-			self.maximizeFontAnimation.start()
+		UIView.animate(
+			withDuration: placeholderDuration,
+			delay: .zero,
+			options: [.preferredFramesPerSecond60],
+			animations: {
+				self.layoutIfNeeded()
+				self.maximizeFontAnimation.start()
 		}, completion: { _ in
 			self.maximizeFontAnimation.stop()
 		})
@@ -268,17 +293,17 @@ open class TweePlaceholderTextField: UITextField {
 			placeholderLayoutGuide.leadingAnchor.constraint(equalTo: leadingAnchor),
 			placeholderLayoutGuide.trailingAnchor.constraint(equalTo: trailingAnchor),
 			placeholderLayoutGuide.bottomAnchor.constraint(equalTo: bottomAnchor)
-			])
+		])
 
 		disablePlaceholderHeightConstraint()
 
 		let centerYConstraint = placeholderLabel.centerYAnchor.constraint(equalTo: centerYAnchor)
 		centerYConstraint.priority = .defaultHigh
 
-        NSLayoutConstraint.activate([
-            placeholderLabel.bottomAnchor.constraint(equalTo: placeholderLayoutGuide.topAnchor),
-            centerYConstraint
-            ])
+		NSLayoutConstraint.activate([
+			placeholderLabel.bottomAnchor.constraint(equalTo: placeholderLayoutGuide.topAnchor),
+			centerYConstraint
+		])
 
 		configurePlaceholderInsets()
 	}
@@ -293,9 +318,9 @@ open class TweePlaceholderTextField: UITextField {
 	}
 
 	private func enablePlaceholderHeightConstraint() {
-        if placeholderLayoutGuide.owningView == nil {
-            return
-        }
+		if placeholderLayoutGuide.owningView == nil {
+			return
+		}
 
 		placeholderGuideHeightConstraint?.isActive = false
 		placeholderGuideHeightConstraint = placeholderLayoutGuide.heightAnchor.constraint(equalTo: heightAnchor)
@@ -303,12 +328,12 @@ open class TweePlaceholderTextField: UITextField {
 	}
 
 	private func disablePlaceholderHeightConstraint() {
-        if placeholderLayoutGuide.owningView == nil {
-            return
-        }
+		if placeholderLayoutGuide.owningView == nil {
+			return
+		}
 
 		placeholderGuideHeightConstraint?.isActive = false
-		placeholderGuideHeightConstraint = placeholderLayoutGuide.heightAnchor.constraint(equalToConstant: 0)
+		placeholderGuideHeightConstraint = placeholderLayoutGuide.heightAnchor.constraint(equalToConstant: .zero)
 		placeholderGuideHeightConstraint?.isActive = true
 	}
 }

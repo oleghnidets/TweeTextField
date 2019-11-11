@@ -8,6 +8,17 @@ import QuartzCore
 /// An object of the class can show animated bottom line when a user begins editing.
 open class TweeActiveTextField: TweeBorderedTextField {
 
+	enum Settings {
+
+		enum Animation {
+
+			enum Key {
+				static let activeStart = "ActiveLineStartAnimation"
+				static let activeEnd = "ActiveLineEndAnimation"
+			}
+		}
+	}
+
 	/// Color of line that appears when a user begins editing.
 	@IBInspectable public var activeLineColor: UIColor {
 		get {
@@ -24,7 +35,7 @@ open class TweeActiveTextField: TweeBorderedTextField {
 	/// Width of line that appears when a user begins editing.
 	@IBInspectable public var activeLineWidth: CGFloat {
 		get {
-			return activeLine.layer.lineWidth
+			activeLine.layer.lineWidth
 		} set {
 			activeLine.layer.lineWidth = newValue
 		}
@@ -55,11 +66,9 @@ open class TweeActiveTextField: TweeBorderedTextField {
 	open override func layoutSubviews() {
 		super.layoutSubviews()
 
-		guard isEditing else {
-			return
+		if isEditing {
+			calculateLine(activeLine)
 		}
-
-		calculateLine(activeLine)
 	}
 
 	private func initializeSetup() {
@@ -75,31 +84,48 @@ open class TweeActiveTextField: TweeBorderedTextField {
 	private func observe() {
 		let notificationCenter = NotificationCenter.default
 
-		notificationCenter.addObserver(self,
-									   selector: #selector(textFieldDidBeginEditing),
-									   name: UITextField.textDidBeginEditingNotification,
-									   object: self)
+		notificationCenter.addObserver(
+			self,
+			selector: #selector(showLineAnimation),
+			name: UITextField.textDidBeginEditingNotification,
+			object: self
+		)
 
-		notificationCenter.addObserver(self,
-									   selector: #selector(textFieldDidEndEditing),
-									   name: UITextField.textDidEndEditingNotification,
-									   object: self)
+		notificationCenter.addObserver(
+			self,
+			selector: #selector(hideLineAnimation),
+			name: UITextField.textDidEndEditingNotification,
+			object: self
+		)
 	}
 
-	@objc private func textFieldDidEndEditing() {
-		let animation = CABasicAnimation(path: #keyPath(CAShapeLayer.strokeEnd), fromValue: nil, toValue: 0.0, duration: animationDuration)
-		activeLine.layer.add(animation, forKey: "ActiveLineEndAnimation")
-	}
+	@objc private func showLineAnimation() {
+        calculateLine(activeLine)
 
-	@objc private func textFieldDidBeginEditing() {
-		calculateLine(activeLine)
+		let animation = CABasicAnimation(
+			path: #keyPath(CAShapeLayer.strokeEnd),
+			fromValue: CGFloat.zero,
+			toValue: CGFloat(1),
+			duration: animationDuration
+		)
 
-		let animation = CABasicAnimation(path: #keyPath(CAShapeLayer.strokeEnd), fromValue: 0.0, toValue: 1.0, duration: animationDuration)
-		activeLine.layer.add(animation, forKey: "ActiveLineStartAnimation")
-	}
+		activeLine.layer.add(animation, forKey: Settings.Animation.Key.activeStart)
+    }
+
+    @objc private func hideLineAnimation() {
+		let animation = CABasicAnimation(
+			path: #keyPath(CAShapeLayer.strokeEnd),
+			fromValue: nil,
+			toValue: CGFloat.zero,
+			duration: animationDuration
+		)
+
+        activeLine.layer.add(animation, forKey: Settings.Animation.Key.activeEnd)
+    }
 }
 
 private extension CABasicAnimation {
+
 	convenience init(path: String, fromValue: Any?, toValue: Any?, duration: CFTimeInterval) {
 		self.init(keyPath: path)
 

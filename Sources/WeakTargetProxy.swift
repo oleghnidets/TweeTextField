@@ -22,6 +22,6 @@ internal final class WeakTargetProxy: NSObject {
 	}
 
 	override func forwardingTarget(for aSelector: Selector!) -> Any? {
-		return target
+		target
 	}
 }

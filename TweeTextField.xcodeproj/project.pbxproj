@@ -119,11 +119,11 @@
 		92A146061FEC228900CEADAA /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				92A146071FEC228900CEADAA /* TweePlaceholderTextField.swift */,
-				92A146081FEC228900CEADAA /* TweeBorderedTextField.swift */,
-				92A146091FEC228900CEADAA /* TweeAttributedTextField.swift */,
-				92A1460A1FEC228900CEADAA /* TweeActiveTextField.swift */,
 				92A1460B1FEC228900CEADAA /* FontAnimation.swift */,
+				92A1460A1FEC228900CEADAA /* TweeActiveTextField.swift */,
+				92A146091FEC228900CEADAA /* TweeAttributedTextField.swift */,
+				92A146081FEC228900CEADAA /* TweeBorderedTextField.swift */,
+				92A146071FEC228900CEADAA /* TweePlaceholderTextField.swift */,
 				7C15066B214BF43D006A7D4C /* WeakTargetProxy.swift */,
 			);
 			path = Sources;
@@ -193,6 +193,7 @@
 				7C065D2720E3EFCD00B8F983 /* Frameworks */,
 				7C065D2820E3EFCD00B8F983 /* Headers */,
 				7C065D2920E3EFCD00B8F983 /* Resources */,
+				7CF472762379FAC300E2A771 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -285,6 +286,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		7CF472762379FAC300E2A771 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
 		9216E14D203C376B00ECD005 /* Run Script - SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

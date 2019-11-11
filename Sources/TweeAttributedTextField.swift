@@ -17,7 +17,7 @@ open class TweeAttributedTextField: TweeActiveTextField {
 	/// Color of info text.
 	@IBInspectable public var infoTextColor: UIColor {
 		get {
-			return infoLabel.textColor
+			infoLabel.textColor
 		} set {
 			infoLabel.textColor = newValue
 		}
@@ -26,7 +26,7 @@ open class TweeAttributedTextField: TweeActiveTextField {
 	/// Font size of info text. If you want to change font use `infoLabel` property.
 	@IBInspectable public var infoFontSize: CGFloat {
 		get {
-			return infoLabel.font.pointSize
+			infoLabel.font.pointSize
 		} set {
 			infoLabel.font = infoLabel.font.withSize(newValue)
 		}
@@ -78,9 +78,13 @@ open class TweeAttributedTextField: TweeActiveTextField {
 			return
 		}
 
-		UIView.transition(with: infoLabel, duration: infoAnimationDuration, options: [.transitionCrossDissolve], animations: {
-			self.infoLabel.alpha = 1
-			self.infoLabel.text = text
+		UIView.transition(
+			with: infoLabel,
+			duration: infoAnimationDuration,
+			options: [.transitionCrossDissolve],
+			animations: {
+				self.infoLabel.alpha = 1
+				self.infoLabel.text = text
 		})
 	}
 
@@ -88,12 +92,12 @@ open class TweeAttributedTextField: TweeActiveTextField {
 	/// - Parameter animated: By default is `true`.
 	public func hideInfo(animated: Bool = true) {
 		guard animated else {
-			infoLabel.alpha = 0
+			infoLabel.alpha = .zero
 			return
 		}
 
 		UIView.animate(withDuration: infoAnimationDuration) {
-			self.infoLabel.alpha = 0
+			self.infoLabel.alpha = .zero
 		}
 	}
 
@@ -106,8 +110,8 @@ open class TweeAttributedTextField: TweeActiveTextField {
 		infoLabel.translatesAutoresizingMaskIntoConstraints = false
 
 		NSLayoutConstraint.activate([
-			infoLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0),
-			infoLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0),
+			infoLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: .zero),
+			infoLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: .zero),
 			infoLabel.topAnchor.constraint(equalTo: bottomAnchor, constant: 2)
 			])
 	}
