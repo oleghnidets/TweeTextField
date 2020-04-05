@@ -13,7 +13,7 @@ internal final class WeakTargetProxy: NSObject {
 		super.init()
 	}
 
-	override func responds(to aSelector: Selector!) -> Bool {
+	override func responds(to aSelector: Selector) -> Bool {
 		guard let target = target else {
 			return super.responds(to: aSelector)
 		}
@@ -21,7 +21,7 @@ internal final class WeakTargetProxy: NSObject {
 		return target.responds(to: aSelector) || super.responds(to: aSelector)
 	}
 
-	override func forwardingTarget(for aSelector: Selector!) -> Any? {
+	override func forwardingTarget(for aSelector: Selector) -> Any? {
 		target
 	}
 }

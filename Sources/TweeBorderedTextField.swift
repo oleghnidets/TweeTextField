@@ -10,7 +10,7 @@ internal class Line {
 	var layer = CAShapeLayer()
 }
 
-/// Сustom offset of bottom line.
+/// Custom offset of bottom line.
 public struct BorderOffset {
 	let x: CGFloat // swiftlint:disable:this identifier_name
 	let y: CGFloat // swiftlint:disable:this identifier_name
@@ -49,7 +49,7 @@ open class TweeBorderedTextField: TweePlaceholderTextField {
 	// MARK: Methods
 
     /// :nodoc:
-	public override init(frame: CGRect) {
+	override public init(frame: CGRect) {
 		super.init(frame: frame)
 
 		initializeSetup()

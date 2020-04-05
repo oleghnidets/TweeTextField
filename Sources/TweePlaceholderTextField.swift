@@ -59,28 +59,28 @@ open class TweePlaceholderTextField: UITextField {
 	public private(set) lazy var placeholderLabel = UILabel()
 
 	///	The current text that is displayed by the label.
-	open override var text: String? {
+	override open var text: String? {
 		didSet {
 			setPlaceholderSizeImmediately()
 		}
 	}
 
 	/// The styled text displayed by the text field.
-	open override var attributedText: NSAttributedString? {
+	override open var attributedText: NSAttributedString? {
 		didSet {
 			setPlaceholderSizeImmediately()
 		}
 	}
 
 	/// The technique to use for aligning the text.
-	open override var textAlignment: NSTextAlignment {
+	override open var textAlignment: NSTextAlignment {
 		didSet {
 			placeholderLabel.textAlignment = textAlignment
 		}
 	}
 
 	/// The font used to display the text.
-	open override var font: UIFont? {
+	override open var font: UIFont? {
 		didSet {
 			configurePlaceholderFont()
 		}
@@ -106,7 +106,7 @@ open class TweePlaceholderTextField: UITextField {
 	// MARK: Methods
 
 	/// :nodoc:
-	public override init(frame: CGRect) {
+	override public init(frame: CGRect) {
 		super.init(frame: frame)
 
 		initializeSetup()
@@ -120,7 +120,7 @@ open class TweePlaceholderTextField: UITextField {
 	}
 
 	/// :nodoc:
-	open override func awakeFromNib() {
+	override open func awakeFromNib() {
 		super.awakeFromNib()
 
 		configurePlaceholderLabel()
@@ -128,7 +128,7 @@ open class TweePlaceholderTextField: UITextField {
 	}
 
 	/// :nodoc:
-	open override func layoutSubviews() {
+	override open func layoutSubviews() {
 		super.layoutSubviews()
 
 		configurePlaceholderInsets()
@@ -199,24 +199,24 @@ open class TweePlaceholderTextField: UITextField {
 		}
 
 		enablePlaceholderHeightConstraint()
-
-		UIView.animate(
-			withDuration: isEditing ? placeholderDuration : .zero,
-			delay: .zero,
-			options: [.preferredFramesPerSecond30],
-			animations: {
-				self.layoutIfNeeded()
-
-				switch self.minimizationAnimationType {
-				case .immediately:
-					self.placeholderLabel.font = self.placeholderLabel.font.withSize(self.minimumPlaceholderFontSize)
-				case .smoothly:
-					self.minimizeFontAnimation.start()
-				}
-		},
-			completion: { _ in
-				self.minimizeFontAnimation.stop()
-		})
+        
+        UIView.animate(
+            withDuration: isEditing ? placeholderDuration : .zero,
+            delay: .zero,
+            options: [.preferredFramesPerSecond30],
+            animations: {
+                self.layoutIfNeeded()
+                
+                switch self.minimizationAnimationType {
+                case .immediately:
+                    self.placeholderLabel.font = self.placeholderLabel.font.withSize(self.minimumPlaceholderFontSize)
+                case .smoothly:
+                    self.minimizeFontAnimation.start()
+                }
+        },
+            completion: { _ in
+                self.minimizeFontAnimation.stop()
+        })
 	}
 
 	@objc private func minimizePlaceholderFontSize() {

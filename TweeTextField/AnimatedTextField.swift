@@ -5,6 +5,7 @@
 import UIKit
 
 class AnimatedTextField: TweeAttributedTextField {
+    
     /// :nodoc:
 	override func awakeFromNib() {
 		super.awakeFromNib()

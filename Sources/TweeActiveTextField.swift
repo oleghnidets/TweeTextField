@@ -2,8 +2,8 @@
 //  Copyright © 2017-2019 Oleg Hnidets. All rights reserved.
 //
 
-import UIKit
 import QuartzCore
+import UIKit
 
 /// An object of the class can show animated bottom line when a user begins editing.
 open class TweeActiveTextField: TweeBorderedTextField {
@@ -13,11 +13,14 @@ open class TweeActiveTextField: TweeBorderedTextField {
 		enum Animation {
 
 			enum Key {
+                
 				static let activeStart = "ActiveLineStartAnimation"
 				static let activeEnd = "ActiveLineEndAnimation"
 			}
 		}
 	}
+    
+    private var activeLine = Line()
 
 	/// Color of line that appears when a user begins editing.
 	@IBInspectable public var activeLineColor: UIColor {
@@ -44,26 +47,24 @@ open class TweeActiveTextField: TweeBorderedTextField {
 	/// Width of line that appears when a user begins editing.
 	@IBInspectable public var animationDuration: Double = 1
 
-	private var activeLine = Line()
-
 	// MARK: Methods
 
     /// :nodoc:
-	public override init(frame: CGRect) {
+    public required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+
+        initializeSetup()
+    }
+    
+    /// :nodoc:
+	override public init(frame: CGRect) {
 		super.init(frame: frame)
 
 		initializeSetup()
 	}
-
+    
     /// :nodoc:
-	public required init?(coder aDecoder: NSCoder) {
-		super.init(coder: aDecoder)
-
-		initializeSetup()
-	}
-
-    /// :nodoc:
-	open override func layoutSubviews() {
+	override open func layoutSubviews() {
 		super.layoutSubviews()
 
 		if isEditing {

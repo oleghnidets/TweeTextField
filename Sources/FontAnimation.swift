@@ -2,9 +2,9 @@
 //  Copyright © 2017-2019 Oleg Hnidets. All rights reserved.
 //
 
+import CoreFoundation
 import Foundation
 import QuartzCore
-import CoreFoundation
 
 internal final class FontAnimation {
 

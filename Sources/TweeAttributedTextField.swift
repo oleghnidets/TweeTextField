@@ -35,7 +35,7 @@ open class TweeAttributedTextField: TweeActiveTextField {
 	// MARK: Methods
 
     /// :nodoc:
-	public override init(frame: CGRect) {
+	override public init(frame: CGRect) {
 		super.init(frame: frame)
 
 		initializeSetup()

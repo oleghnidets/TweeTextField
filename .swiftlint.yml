@@ -8,4 +8,117 @@ type_name:
 identifier_name:
   min_length: 2
 
+opt_in_rules:
+    - conditional_returns_on_newline
+    - trailing_newline
+    - closure_end_indentation
+    - closure_spacing
+    - empty_count
+    - explicit_init
+    - fatal_error_message
+    - first_where
+    - unused_declaration
+    - unused_import
+    - force_cast
+    - implicitly_unwrapped_optional
+    - multiline_parameters
+    - operator_usage_whitespace
+    - overridden_super_call
+    - private_outlet
+    - private_action
+    - number_separator
+    - protocol_property_accessors_order
+    - redundant_nil_coalescing
+    - sorted_imports
+    - duplicate_imports
+    - syntactic_sugar
+    - vertical_whitespace
+    - toggle_bool
+    - empty_string
+    - identical_operands
+    - fallthrough
+    - yoda_condition
+    - implicit_return
+    - mark
+    - convenience_type
+    - modifier_order
+    - unneeded_parentheses_in_closure_argument
+    
+disabled_rules: # rule identifiers to exclude from running
+    - trailing_whitespace
+    - closure_end_indentation
+
+conditional_returns_on_newline:
+    severity: error
+
+implicitly_unwrapped_optional:
+  mode: all_except_iboutlets
+
+large_tuple:
+  warning: 3
+  error: 4
+
+trailing_comma:
+  mandatory_comma: false
+
+number_separator:
+  minimum_length: 8
+
+private_outlet:
+  allow_private_set: true
+
+colon:
+  severity: error
+  comma: error
+  empty_count: error
+  legacy_constant: error
+  legacy_constructor: error
+  opening_brace: error
+  trailing_newline: error
+  trailing_semicolon: error
+  weak_delegate: error
+  class_delegate_protocol: error
+  mark: error
+  unneeded_break_in_switch: error
+  force_unwrapping: error
+  
+custom_rules:
+    explicit_failure_call:
+        name: "Avoid asserting 'false'"
+        regex: '(assert\(.*\)|preconditionFailure\(.*\)|assertionFailure\(.*\)|precondition\(.*\))'
+        message: Use `Debug.reasonedFailure` or `Debug.failure` instead.
+        severity: warning
+    multiple_empty_lines:
+       name: "Multiple Empty Lines"
+       regex: '((?:\s*\n){3,})'
+       message: "There are too many line breaks"
+       severity: error
+    comments_space:
+        name: "Space After Comment"
+        regex: '(^ *//\w+)'
+        message: "There should be a space after //"
+        severity: error
+    empty_first_line:
+        name: "Empty First Line"
+        regex: '(^[ a-zA-Z ]*(?:protocol|extension|class|struct|enum) (?!(?:var|let))[ a-zA-Z:]*\{\n *\S+)'
+        message: "There should be an empty line after a declaration"
+        severity: error
+    double_space:
+      include: "*.swift"
+      name: "Double space are disabled"
+      regex: '([a-z,A-Z] \s+)'
+      message: "Double space between keywords"
+      match_kinds: keyword
+      severity: error
+    empty_line_after_super:
+      name: "Empty Line After Super"
+      regex: '(^ *super\.[ a-zA-Z0-9=?.\(\)\{\}:,><!]*\n *(?!(?:\}|return))\S+)'
+      message: "There should be an empty line after super"
+      severity: error
+    avoid_not_english_names:
+        name: "Can't contain cyrylic letters: а-я А-Я"
+        regex: '[а-яА-ЯёЁ]'
+        message: "Name shouldn't contains cyrylic letters"
+        severity: error
+
 reporter: "xcode"
