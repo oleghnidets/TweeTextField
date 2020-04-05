@@ -1,3 +1,6 @@
+// swift-tools-version:5.1
+//
+//  Package.swift
 //
 //  Copyright (c) 2017-2020 Oleg Hnidets
 //
@@ -18,40 +21,21 @@
 //  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //  SOFTWARE.
-//
 
-import UIKit
+import PackageDescription
 
-class AnimatedTextField: TweeAttributedTextField {
-    
-    /// :nodoc:
-	override func awakeFromNib() {
-		super.awakeFromNib()
-
-		NotificationCenter.default.addObserver(
-			self,
-			selector: #selector(startEditing),
-			name: UITextField.textDidBeginEditingNotification,
-			object: self
-		)
-
-		NotificationCenter.default.addObserver(
-			self,
-			selector: #selector(endEditingText),
-			name: UITextField.textDidEndEditingNotification,
-			object: self
-		)
-	}
-
-	@objc private func startEditing() {
-		placeholderLabel.textColor = .red
-	}
-
-	@objc private func endEditingText() {
-		if let text = text, !text.isEmpty {
-			placeholderLabel.textColor = .red
-		} else {
-			placeholderLabel.textColor = .gray
-		}
-	}
-}
+let package = Package(
+    name: "TweeTextField",
+    platforms: [
+        .iOS(.v10)
+    ],
+    products: [
+        .library(name: "TweeTextField", targets: ["TweeTextField"])
+    ],
+    dependencies: [
+    ],
+    targets: [
+        .target(name: "TweeTextField", path: "Sources")
+    ],
+    swiftLanguageVersions: [.v5]
+)

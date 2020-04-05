@@ -1,5 +1,23 @@
-//  Created by Oleg Hnidets on 12/20/17.
-//  Copyright © 2017-2019 Oleg Hnidets. All rights reserved.
+//
+//  Copyright (c) 2017-2020 Oleg Hnidets
+//
+//  Permission is hereby granted, free of charge, to any person obtaining a copy
+//  of this software and associated documentation files (the "Software"), to deal
+//  in the Software without restriction, including without limitation the rights
+//  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//  copies of the Software, and to permit persons to whom the Software is
+//  furnished to do so, subject to the following conditions:
+//
+//  The above copyright notice and this permission notice shall be included in all
+//  copies or substantial portions of the Software.
+//
+//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+//  SOFTWARE.
 //
 
 import UIKit
@@ -59,28 +77,28 @@ open class TweePlaceholderTextField: UITextField {
 	public private(set) lazy var placeholderLabel = UILabel()
 
 	///	The current text that is displayed by the label.
-	open override var text: String? {
+	override open var text: String? {
 		didSet {
 			setPlaceholderSizeImmediately()
 		}
 	}
 
 	/// The styled text displayed by the text field.
-	open override var attributedText: NSAttributedString? {
+	override open var attributedText: NSAttributedString? {
 		didSet {
 			setPlaceholderSizeImmediately()
 		}
 	}
 
 	/// The technique to use for aligning the text.
-	open override var textAlignment: NSTextAlignment {
+	override open var textAlignment: NSTextAlignment {
 		didSet {
 			placeholderLabel.textAlignment = textAlignment
 		}
 	}
 
 	/// The font used to display the text.
-	open override var font: UIFont? {
+	override open var font: UIFont? {
 		didSet {
 			configurePlaceholderFont()
 		}
@@ -106,7 +124,7 @@ open class TweePlaceholderTextField: UITextField {
 	// MARK: Methods
 
 	/// :nodoc:
-	public override init(frame: CGRect) {
+	override public init(frame: CGRect) {
 		super.init(frame: frame)
 
 		initializeSetup()
@@ -120,7 +138,7 @@ open class TweePlaceholderTextField: UITextField {
 	}
 
 	/// :nodoc:
-	open override func awakeFromNib() {
+	override open func awakeFromNib() {
 		super.awakeFromNib()
 
 		configurePlaceholderLabel()
@@ -128,7 +146,7 @@ open class TweePlaceholderTextField: UITextField {
 	}
 
 	/// :nodoc:
-	open override func layoutSubviews() {
+	override open func layoutSubviews() {
 		super.layoutSubviews()
 
 		configurePlaceholderInsets()
@@ -199,24 +217,24 @@ open class TweePlaceholderTextField: UITextField {
 		}
 
 		enablePlaceholderHeightConstraint()
-
-		UIView.animate(
-			withDuration: isEditing ? placeholderDuration : .zero,
-			delay: .zero,
-			options: [.preferredFramesPerSecond30],
-			animations: {
-				self.layoutIfNeeded()
-
-				switch self.minimizationAnimationType {
-				case .immediately:
-					self.placeholderLabel.font = self.placeholderLabel.font.withSize(self.minimumPlaceholderFontSize)
-				case .smoothly:
-					self.minimizeFontAnimation.start()
-				}
-		},
-			completion: { _ in
-				self.minimizeFontAnimation.stop()
-		})
+        
+        UIView.animate(
+            withDuration: isEditing ? placeholderDuration : .zero,
+            delay: .zero,
+            options: [.preferredFramesPerSecond30],
+            animations: {
+                self.layoutIfNeeded()
+                
+                switch self.minimizationAnimationType {
+                case .immediately:
+                    self.placeholderLabel.font = self.placeholderLabel.font.withSize(self.minimumPlaceholderFontSize)
+                case .smoothly:
+                    self.minimizeFontAnimation.start()
+                }
+        },
+            completion: { _ in
+                self.minimizeFontAnimation.stop()
+        })
 	}
 
 	@objc private func minimizePlaceholderFontSize() {
