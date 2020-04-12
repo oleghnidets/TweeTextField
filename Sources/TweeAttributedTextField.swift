@@ -74,6 +74,7 @@ open class TweeAttributedTextField: TweeActiveTextField {
 	/// - Parameters:
 	///   - text: Custom attributed text to show.
 	///   - animated: By default is `true`.
+    @objc(showAttributtedInfo:animated:)
 	public func showInfo(_ attrText: NSAttributedString, animated: Bool = true) {
 		guard animated else {
 			infoLabel.attributedText = attrText
@@ -90,7 +91,7 @@ open class TweeAttributedTextField: TweeActiveTextField {
 	/// - Parameters:
 	///   - text: Custom text to show.
 	///   - animated: By default is `true`.
-	public func showInfo(_ text: String, animated: Bool = true) {
+    @objc public func showInfo(_ text: String, animated: Bool = true) {
 		guard animated else {
 			infoLabel.text = text
 			return
@@ -108,7 +109,7 @@ open class TweeAttributedTextField: TweeActiveTextField {
 
 	/// Hides the info label with animation or not.
 	/// - Parameter animated: By default is `true`.
-	public func hideInfo(animated: Bool = true) {
+    @objc public func hideInfo(animated: Bool = true) {
 		guard animated else {
 			infoLabel.alpha = .zero
 			return
