@@ -1,26 +1,6 @@
 {
   "warnings": [
-    {
-      "file": "/Users/ognidets/TweeTextField/Sources/TweeBorderedTextField.swift",
-      "line": 20,
-      "symbol": "TweeBorderedTextField",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/ognidets/TweeTextField/Sources/TweeBorderedTextField.swift",
-      "line": 23,
-      "symbol": "TweeBorderedTextField.borderOffset",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/ognidets/TweeTextField/Sources/TweeBorderedTextField.swift",
-      "line": 26,
-      "symbol": "TweeBorderedTextField.lineColor",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    }
+
   ],
   "source_directory": "/Users/ognidets/TweeTextField"
 }
