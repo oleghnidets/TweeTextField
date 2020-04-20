@@ -121,6 +121,7 @@ open class TweePlaceholderTextField: UITextField {
 	private var leadingPlaceholderConstraint: NSLayoutConstraint?
 	private var trailingPlaceholderConstraint: NSLayoutConstraint?
     private var bottomPlaceholderConstraint: NSLayoutConstraint?
+    private var centerYPlaceholderConstraint: NSLayoutConstraint?
 	private var placeholderGuideHeightConstraint: NSLayoutConstraint?
 
 	// MARK: Methods
@@ -311,9 +312,9 @@ open class TweePlaceholderTextField: UITextField {
         bottomPlaceholderConstraint = placeholderLabel.bottomAnchor.constraint(equalTo: placeholderLayoutGuide.topAnchor)
         bottomPlaceholderConstraint?.identifier = "twee.placeholder.bottom"
 
-		let centerYConstraint = placeholderLabel.centerYAnchor.constraint(equalTo: centerYAnchor)
-		centerYConstraint.priority = .defaultHigh
-        centerYConstraint.identifier = "twee.placeholder.centerY"
+		centerYPlaceholderConstraint = placeholderLabel.centerYAnchor.constraint(equalTo: centerYAnchor)
+		centerYPlaceholderConstraint?.priority = .defaultHigh
+        centerYPlaceholderConstraint?.identifier = "twee.placeholder.centerY"
         
         NSLayoutConstraint.activate([
             leadingPlaceholderConstraint,
@@ -322,7 +323,7 @@ open class TweePlaceholderTextField: UITextField {
             placeholderLayoutGuide.trailingAnchor.constraint(equalTo: trailingAnchor),
             placeholderLayoutGuide.bottomAnchor.constraint(equalTo: bottomAnchor),
             bottomPlaceholderConstraint,
-            centerYConstraint
+            centerYPlaceholderConstraint
             ].compactMap { $0 }
         )
 
@@ -339,6 +340,7 @@ open class TweePlaceholderTextField: UITextField {
 		trailingPlaceholderConstraint?.constant = -trailing - placeholderInsets.right
         // bottom
         bottomPlaceholderConstraint?.constant = -placeholderInsets.bottom
+        centerYPlaceholderConstraint?.constant = -placeholderInsets.bottom
 	}
 
 	private func enablePlaceholderHeightConstraint() {
