@@ -105,11 +105,23 @@ Check out sample project for more information.
 ![Attributes Inspector](/docs/attributes.png)
 
 ```swift
-emailTextField.infoTextColor = .yellow
-emailTextField.showInfo("Hello World!", animated: true)
-		
-usernameTextField.lineColor = .green
-usernameTextField.lineWidth = 2
+emailTextField.infoAnimationDuration = 0.7
+emailTextField.infoTextColor = .systemRed
+emailTextField.infoFontSize = 13
+        
+emailTextField.activeLineColor = .systemBlue
+emailTextField.activeLineWidth = 1
+emailTextField.animationDuration = 0.3
+        
+emailTextField.lineColor = .lightGray
+emailTextField.lineWidth = 1
+        
+emailTextField.minimumPlaceholderFontSize = 10
+emailTextField.originalPlaceholderFontSize = 13
+emailTextField.placeholderDuration = 0.3
+emailTextField.placeholderColor = .systemGray2
+emailTextField.tweePlaceholder = "Email address"
+emailTextField.placeholderLabel.font = UIFont.preferredFont(forTextStyle: .largeTitle)
 ```
 
 ## Communication
