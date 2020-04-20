@@ -23,6 +23,7 @@
 import UIKit
 
 extension UITextField {
+    
 	func addLeftArrowButton() {
 		let arrowButton = UIButton()
 		arrowButton.setImage(#imageLiteral(resourceName: "drop_button"), for: .normal)
@@ -43,6 +44,7 @@ extension UITextField {
 }
 
 class PasswordTextField: TweeAttributedTextField {
+    
 	override func awakeFromNib() {
 		super.awakeFromNib()
 
