@@ -1,5 +1,5 @@
-//  Created by Oleg on 6/27/18.
-//  Copyright © 2018-2019 Oleg Hnidets. All rights reserved.
+//  
+//  Copyright © 2018-Present Oleg Hnidets. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

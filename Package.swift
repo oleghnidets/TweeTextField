@@ -2,7 +2,7 @@
 //
 //  Package.swift
 //
-//  Copyright (c) 2017-2020 Oleg Hnidets
+//  Copyright (c) 2017-Present Oleg Hnidets
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
