@@ -4,25 +4,34 @@
 [![Build][build-image]][build-url]
 [![Platform][platform-image]][platform-url]
 [![Documentation][docs-image]][docs-url]
+[![SPM][spm-image]][spm-url]
 [![Pod][pod-image]][pod-url]
 [![Carthage][carthage-image]][carthage-url]
 [![License][license-image]][license-url]
 
 
-This is lightweight library that provides different types of Text Fields based on your needs. I was inspired by [Jan Henneberg](https://uimovement.com/ui/2524/input-field-help/). 
+This is lightweight library that provides different types of Text Fields based on your needs.
 
 ![Preview](/docs/tweetextfield-sample.gif)
+
+
+<!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=6 orderedList=false} -->
+
+<!-- code_chunk_output -->
 
 - [Features](#features)
 - [Requirements](#requirements)
 - [Installation](#installation)
-    - [CocoaPods](#cocoapods)
-    - [Swift Package Manager](#swift-package-manager)
-    - [Carthage](#carthage)
-    - [Manually](#manually)
+  - [CocoaPods](#cocoapods)
+  - [Swift Package Manager](#swift-package-manager)
+  - [Carthage](#carthage)
+  - [Manually](#manually)
 - [Usage](#usage)
-- [Communication](#communication)
+- [Contributing and support](#contributing-and-support)
 - [License](#license)
+
+<!-- /code_chunk_output -->
+
 
 ## Features
 
@@ -39,13 +48,13 @@ This is lightweight library that provides different types of Text Fields based o
 
 ## Requirements
 
-- iOS 10.0+
+- iOS 11.0+
 - Xcode 11.0+
 - Swift 5.0+
 
 ## Installation 
 
-#### CocoaPods
+### CocoaPods
 To integrate `TweeTextField` into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```ruby
@@ -54,7 +63,7 @@ pod 'TweeTextField'
 
 Then run `pod install` to integrate the library in your project.
 
-#### Swift Package Manager
+### Swift Package Manager
 Adding TweeTextField to the dependencies value of your `Package.swift` file.
 ```swift
 // swift-tools-version:5.0
@@ -71,7 +80,7 @@ let package = Package(
 
 Or you may use Xcode. `File`->`Swift Packages`->`Add Package Dependency`. Then put link to the [repository](https://github.com/oleghnidets/TweeTextField.git).
 
-#### Carthage
+### Carthage
 To integrate `TweeTextField` into your Xcode project using Carthage, specify it in your Cartfile:
 ```ruby
 github "oleghnidets/TweeTextField"
@@ -80,7 +89,7 @@ github "oleghnidets/TweeTextField"
 Run `carthage update` to build the framework and drag the built `TweeTextField.framework` into your Xcode project. More info you can find on [official page](https://github.com/Carthage/Carthage).
 
 
-#### Manually
+### Manually
 1. Download the [code](https://github.com/oleghnidets/TweeTextField/archive/master.zip).
 2. Drag and drop sources in your project.
 3. Import the library in code by `import TweeTextField`.
@@ -124,27 +133,37 @@ emailTextField.tweePlaceholder = "Email address"
 emailTextField.placeholderLabel.font = UIFont.preferredFont(forTextStyle: .largeTitle)
 ```
 
-## Communication
+## Contributing and support
 
 - If you want to contribute, [submit a pull request](https://github.com/oleghnidets/TweeTextField/compare).
-- If you found a bug, have suggestions or need help, please, [open an issue](https://github.com/oleghnidets/TweeTextField/issues/new).
+- If you found a bug, have suggestions or need help [open a new issue](https://github.com/oleghnidets/TweeTextField/issues/new).
 - If you need help, write me oleg.oleksan@gmail.com.
 
 ## License
+
 Distributed under the MIT license. See [LICENSE](https://github.com/oleghnidets/TweeTextField/blob/develop/LICENSE) for more information.
 
 
-[swift-image]: https://img.shields.io/badge/swift-5.0-orange.svg
+[swift-image]: https://img.shields.io/badge/swift-5-orange.svg
 [swift-url]: https://swift.org/
+
 [license-image]: https://img.shields.io/badge/License-MIT-blue.svg
 [license-url]: LICENSE
-[docs-image]: https://github.com/oleghnidets/TweeTextField/blob/master/docs/badge.svg
+
+[spm-image]: https://img.shields.io/badge/Swift_Package_Manager-compatible-orange?style=flat-square
+[spm-url]: Package.swift
+
+[docs-image]: docs/badge.svg
 [docs-url]: https://oleghnidets.github.io/TweeTextField
+
 [platform-image]: https://img.shields.io/badge/platform-ios-lightgrey.svg
 [platform-url]: https://github.com/oleghnidets/TweeTextField
+
 [pod-image]: https://img.shields.io/cocoapods/v/TweeTextField.svg
 [pod-url]: http://cocoapods.org/
+
 [carthage-image]: https://img.shields.io/badge/carthage-%E2%9C%93-orange.svg
 [carthage-url]: https://github.com/Carthage/Carthage
+
 [build-image]: https://travis-ci.org/oleghnidets/TweeTextField.svg?branch=master
 [build-url]: https://travis-ci.org/oleghnidets/TweeTextField
