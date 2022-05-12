@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7C065D2F20E3EFCD00B8F983 /* TweeTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C065D2D20E3EFCD00B8F983 /* TweeTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7C065D3220E3EFCD00B8F983 /* TweeTextField.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C065D2B20E3EFCD00B8F983 /* TweeTextField.framework */; };
 		7C065D3320E3EFCD00B8F983 /* TweeTextField.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7C065D2B20E3EFCD00B8F983 /* TweeTextField.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7C065D3720E3F02C00B8F983 /* TweePlaceholderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A146071FEC228900CEADAA /* TweePlaceholderTextField.swift */; };
@@ -57,8 +56,6 @@
 
 /* Begin PBXFileReference section */
 		7C065D2B20E3EFCD00B8F983 /* TweeTextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TweeTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7C065D2D20E3EFCD00B8F983 /* TweeTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TweeTextField.h; sourceTree = "<group>"; };
-		7C065D2E20E3EFCD00B8F983 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7C15066B214BF43D006A7D4C /* WeakTargetProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakTargetProxy.swift; sourceTree = "<group>"; };
 		7C15066E214BF500006A7D4C /* AnimatedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedTextField.swift; sourceTree = "<group>"; };
 		7CF590992125DB5D0015777F /* PasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
@@ -75,8 +72,6 @@
 		92E7FC401FE0374600E58DF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		92E7FC431FE0374600E58DF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		92E7FC451FE0374600E58DF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		92EA75D7204968D600156E9E /* TweeTextField_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TweeTextField_iOS.h; sourceTree = "<group>"; };
-		92EA75D8204968D600156E9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,15 +93,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7C065D2C20E3EFCD00B8F983 /* TweeTextField */ = {
-			isa = PBXGroup;
-			children = (
-				7C065D2D20E3EFCD00B8F983 /* TweeTextField.h */,
-				7C065D2E20E3EFCD00B8F983 /* Info.plist */,
-			);
-			path = TweeTextField;
-			sourceTree = "<group>";
-		};
 		921B72B21FEAB72200370DD6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,9 +120,8 @@
 			isa = PBXGroup;
 			children = (
 				9247B8DF243A6B4300EA912B /* Package.swift */,
+				92A146061FEC228900CEADAA /* Sources */,
 				92E7FC381FE0374600E58DF5 /* TweeTextField */,
-				92EA75D6204968D600156E9E /* TweeTextField-iOS */,
-				7C065D2C20E3EFCD00B8F983 /* TweeTextField */,
 				92E7FC371FE0374500E58DF5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -153,7 +138,6 @@
 		92E7FC381FE0374600E58DF5 /* TweeTextField */ = {
 			isa = PBXGroup;
 			children = (
-				92A146061FEC228900CEADAA /* Sources */,
 				921B72B21FEAB72200370DD6 /* Supporting Files */,
 				92E7FC391FE0374600E58DF5 /* AppDelegate.swift */,
 				92E7FC3D1FE0374600E58DF5 /* Main.storyboard */,
@@ -164,15 +148,6 @@
 			path = TweeTextField;
 			sourceTree = "<group>";
 		};
-		92EA75D6204968D600156E9E /* TweeTextField-iOS */ = {
-			isa = PBXGroup;
-			children = (
-				92EA75D7204968D600156E9E /* TweeTextField_iOS.h */,
-				92EA75D8204968D600156E9E /* Info.plist */,
-			);
-			path = "TweeTextField-iOS";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -180,7 +155,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C065D2F20E3EFCD00B8F983 /* TweeTextField.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
