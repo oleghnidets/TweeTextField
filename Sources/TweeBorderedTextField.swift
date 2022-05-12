@@ -23,15 +23,13 @@
 import UIKit
 
 /// Represents a line containing path and layer.
-internal class Line {
-    
+final class Line {
 	var path = UIBezierPath()
 	var layer = CAShapeLayer()
 }
 
 /// Custom offset of bottom line.
 public struct BorderOffset {
-    
 	let x: CGFloat // swiftlint:disable:this identifier_name
 	let y: CGFloat // swiftlint:disable:this identifier_name
 }
@@ -98,7 +96,7 @@ open class TweeBorderedTextField: TweePlaceholderTextField {
 		layer.addSublayer(line.layer)
 	}
 
-	internal func calculateLine(_ line: Line) {
+    func calculateLine(_ line: Line) {
 		// Path
 		line.path = UIBezierPath()
 

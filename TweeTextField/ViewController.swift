@@ -61,7 +61,7 @@ final class ViewController: UIViewController {
         let newField = TweeAttributedTextField()
         stackView.addArrangedSubview(newField)
         
-        newField.heightAnchor.constraint(equalToConstant: emailTextField.frame.height).isActive = true
+        newField.heightAnchor.constraint(equalToConstant: 40).isActive = true
         
         newField.borderStyle = .roundedRect
         newField.text = "Newly generated"

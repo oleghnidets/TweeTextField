@@ -22,7 +22,7 @@
 
 import Foundation
 
-internal final class WeakTargetProxy: NSObject {
+final class WeakTargetProxy: NSObject {
     
 	private weak var target: NSObjectProtocol?
 

@@ -53,9 +53,11 @@ class PasswordTextField: TweeAttributedTextField {
 	}
 
 	override func layoutSubviews() {
-		super.layoutSubviews()
-
+        super.layoutSubviews()
+        
 		leftView?.frame = CGRect(x: 0, y: 0, width: bounds.height, height: bounds.height)
 		rightView?.frame = CGRect(x: bounds.width - bounds.size.height, y: 0, width: bounds.height, height: bounds.height)
+        
+        super.layoutSubviews()
 	}
 }

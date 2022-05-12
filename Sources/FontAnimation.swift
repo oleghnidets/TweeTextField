@@ -24,7 +24,7 @@ import CoreFoundation
 import Foundation
 import QuartzCore
 
-internal final class FontAnimation {
+final class FontAnimation {
 
 	private enum Settings {
 

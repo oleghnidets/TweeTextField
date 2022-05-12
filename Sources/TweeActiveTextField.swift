@@ -26,12 +26,9 @@ import UIKit
 /// An object of the class can show animated bottom line when a user begins editing.
 open class TweeActiveTextField: TweeBorderedTextField {
 
-	internal enum Settings {
-
-		enum Animation {
-
-			enum Key {
-                
+    enum Settings {
+		enum Animation { // swiftlint:disable:this nesting
+			enum Key { // swiftlint:disable:this nesting
 				static let activeStart = "ActiveLineStartAnimation"
 				static let activeEnd = "ActiveLineEndAnimation"
 			}
@@ -62,7 +59,7 @@ open class TweeActiveTextField: TweeBorderedTextField {
 		}
 	}
 
-	/// Width of line that appears when a user begins editing.
+	/// Animation duration when an active line appears.
 	@IBInspectable public var animationDuration: Double = 1
 
 	// MARK: Methods
